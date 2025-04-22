@@ -3,247 +3,306 @@
 {% block title %}About DataShield{% endblock %}
 
 {% block content %}
-<section class="page-header">
+<!-- Page Header -->
+<section class="py-5 bg-light mt-5">
     <div class="container">
-        <h1>About DataShield</h1>
-        <p>Our mission, team, and commitment to online privacy</p>
-    </div>
-</section>
-
-<section class="about-mission">
-    <div class="container">
-        <div class="mission-content">
-            <h2>Our Mission</h2>
-            <p>At DataShield, we believe that privacy is a fundamental right. In today's digital landscape, where personal data is constantly being collected and monetized, we're on a mission to give users control over their online privacy.</p>
-            <p>We created DataShield with a simple goal: to make advanced privacy protection accessible to everyone, regardless of their technical expertise. Our browser extension empowers users to browse the web without being tracked, profiled, or targeted.</p>
-            <blockquote>
-                "The right to privacy is a cornerstone of internet freedom. We're committed to defending that right for all users."
-            </blockquote>
-        </div>
-        <div class="mission-image">
-            <img src="{{ url_for('static', filename='images/mission-image.jpg') }}" alt="DataShield Mission">
-        </div>
-    </div>
-</section>
-
-<section class="about-story alt-bg">
-    <div class="container">
-        <h2>Our Story</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">2019</div>
-                <div class="timeline-content">
-                    <h3>The Beginning</h3>
-                    <p>DataShield was born out of frustration with the state of online privacy. Our founders, a group of privacy advocates and security experts, saw the need for a comprehensive yet user-friendly privacy tool.</p>
-                </div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-date">2020</div>
-                <div class="timeline-content">
-                    <h3>First Release</h3>
-                    <p>After months of development, we launched the first version of DataShield for Chrome, focusing on tracker blocking and basic cookie management.</p>
-                </div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-date">2021</div>
-                <div class="timeline-content">
-                    <h3>Expansion</h3>
-                    <p>We expanded to Firefox, Edge, and Safari, while adding advanced features like fingerprinting protection and detailed privacy reports.</p>
-                </div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-date">2022</div>
-                <div class="timeline-content">
-                    <h3>Privacy Score</h3>
-                    <p>We introduced the Privacy Score feature, giving users a clear metric to understand and improve their privacy status.</p>
-                </div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-date">Today</div>
-                <div class="timeline-content">
-                    <h3>Growing Community</h3>
-                    <p>DataShield now protects hundreds of thousands of users worldwide, with new features and improvements being added regularly based on community feedback.</p>
-                </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="fw-bold mb-3">About DataShield</h1>
+                <p class="lead text-muted">Our mission, team, and commitment to online privacy</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="team-section">
+<!-- Mission Section -->
+<section class="py-5">
     <div class="container">
-        <h2>Meet Our Team</h2>
-        <p class="section-intro">DataShield is built by a passionate team of privacy advocates, security experts, and developers.</p>
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="mb-4">Our Mission</h2>
+                <p class="lead mb-4">At DataShield, we believe that privacy is a fundamental right. In today's digital landscape, where personal data is constantly being collected and monetized, we're on a mission to give users control over their online privacy.</p>
+                <p class="mb-4">We created DataShield with a simple goal: to make advanced privacy protection accessible to everyone, regardless of their technical expertise. Our browser extension empowers users to browse the web without being tracked, profiled, or targeted.</p>
+                <blockquote class="border-start border-primary border-4 ps-4 py-2 mb-4">
+                    <p class="mb-0 fst-italic">"The right to privacy is a cornerstone of internet freedom. We're committed to defending that right for all users."</p>
+                </blockquote>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='images/mission-image.jpg') }}" alt="DataShield Mission" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Story -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Story</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="timeline">
+                    <div class="position-relative mb-5 ps-5">
+                        <div class="position-absolute top-0 start-0 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            2019
+                        </div>
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 mb-3">The Beginning</h3>
+                                <p class="mb-0">DataShield was born out of frustration with the state of online privacy. Our founders, a group of privacy advocates and security experts, saw the need for a comprehensive yet user-friendly privacy tool.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="position-relative mb-5 ps-5">
+                        <div class="position-absolute top-0 start-0 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            2020
+                        </div>
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 mb-3">First Release</h3>
+                                <p class="mb-0">After months of development and testing, we launched the first version of DataShield for Chrome and Firefox. The response was overwhelming, with thousands of downloads in the first week.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="position-relative mb-5 ps-5">
+                        <div class="position-absolute top-0 start-0 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            2021
+                        </div>
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 mb-3">Expansion</h3>
+                                <p class="mb-0">We expanded to Edge and Safari, reaching more users across different platforms. We also introduced the Privacy Score feature, helping users understand and improve their privacy status.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="position-relative mb-5 ps-5">
+                        <div class="position-absolute top-0 start-0 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            2022
+                        </div>
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 mb-3">Recognition</h3>
+                                <p class="mb-0">DataShield received recognition from privacy advocacy groups and tech publications for its effectiveness and user-friendly design. Our user base grew to over 500,000 active users.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="position-relative ps-5">
+                        <div class="position-absolute top-0 start-0 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            2023
+                        </div>
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 mb-3">Today</h3>
+                                <p class="mb-0">Today, DataShield continues to evolve with new features and improvements. We remain committed to our mission of making privacy protection accessible to everyone.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Meet Our Team</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <img src="{{ url_for('static', filename='images/team-member1.jpg') }}" alt="Alex Mercer" class="rounded-circle mb-4" width="150" height="150">
+                        <h3 class="h5 mb-2">Alex Mercer</h3>
+                        <p class="text-muted mb-3">Lead Developer</p>
+                        <p class="small mb-4">Full-stack developer with 8+ years of experience.</p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a href="https://github.com/alexmercer-dev" class="text-muted"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <img src="{{ url_for('static', filename='images/team-member2.jpg') }}" alt="Sarah Johnson" class="rounded-circle mb-4" width="150" height="150">
+                        <h3 class="h5 mb-2">Sarah Johnson</h3>
+                        <p class="text-muted mb-3">Co-Founder & CTO</p>
+                        <p class="small mb-4">Software engineer with expertise in browser extensions and web security.</p>
+                        <div class="d-flex justify-content-center gap-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <img src="{{ url_for('static', filename='images/team-member3.jpg') }}" alt="Michael Rodriguez" class="rounded-circle mb-4" width="150" height="150">
+                        <h3 class="h5 mb-2">Michael Rodriguez</h3>
+                        <p class="text-muted mb-3">Developer</p>
+                        <p class="small mb-4">Full-stack developer specializing in secure, efficient browser extensions.</p>
+                        <div class="d-flex justify-content-center gap-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <img src="{{ url_for('static', filename='images/team-member4.jpg') }}" alt="Emily Patel" class="rounded-circle mb-4" width="150" height="150">
+                        <h3 class="h5 mb-2">Emily Patel</h3>
+                        <p class="text-muted mb-3">UX Designer</p>
+                        <p class="small mb-4">Designer focused on creating intuitive interfaces for complex privacy tools.</p>
+                        <div class="d-flex justify-content-center gap-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Core Values</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-lock text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Privacy First</h3>
+                        <p class="text-muted">We believe privacy is a fundamental right. Every decision we make puts user privacy at the forefront.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-lightbulb text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Transparency</h3>
+                        <p class="text-muted">We're open about how our tools work and what data they block. No hidden features or secret tracking.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-users text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">User Empowerment</h3>
+                        <p class="text-muted">We create tools that give users control over their data and online experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Press Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Press & Recognition</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <p class="lead fst-italic mb-3">"DataShield sets a new standard for privacy extensions with its intuitive interface and powerful protection features."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="{{ url_for('static', filename='images/press-logo1.png') }}" alt="Tech Review" height="30">
+                            <span class="ms-3 text-muted">Tech Review Magazine</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <p class="lead fst-italic mb-3">"One of the most comprehensive privacy tools we've tested. The Privacy Score feature is particularly impressive."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="{{ url_for('static', filename='images/press-logo2.png') }}" alt="Digital Privacy Today" height="30">
+                            <span class="ms-3 text-muted">Digital Privacy Today</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <p class="lead fst-italic mb-3">"DataShield manages to make privacy protection accessible without compromising on effectiveness."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="{{ url_for('static', filename='images/press-logo3.png') }}" alt="Browser Extensions Weekly" height="30">
+                            <span class="ms-3 text-muted">Browser Extensions Weekly</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-3">Get in Touch</h2>
+        <p class="text-center text-muted mb-5">Have questions, feedback, or partnership inquiries? We'd love to hear from you.</p>
         
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="{{ url_for('static', filename='images/team-member1.jpg') }}" alt="Alex Chen">
-                </div>
-                <h3>Alex Chen</h3>
-                <p class="member-role">Founder & CEO</p>
-                <p class="member-bio">Former security researcher with a passion for digital rights and privacy advocacy.</p>
-                <div class="member-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="{{ url_for('static', filename='images/team-member2.jpg') }}" alt="Sarah Johnson">
-                </div>
-                <h3>Sarah Johnson</h3>
-                <p class="member-role">CTO</p>
-                <p class="member-bio">Browser security expert with 10+ years of experience in privacy-focused technologies.</p>
-                <div class="member-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-envelope text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h5 mb-3">Email Us</h3>
+                        <p><a href="mailto:contact@datashield.com" class="text-decoration-none">contact@datashield.com</a></p>
+                    </div>
                 </div>
             </div>
             
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="{{ url_for('static', filename='images/team-member3.jpg') }}" alt="David Park">
-                </div>
-                <h3>David Park</h3>
-                <p class="member-role">Lead Developer</p>
-                <p class="member-bio">Full-stack developer specializing in browser extensions and web technologies.</p>
-                <div class="member-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-comments text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h5 mb-3">Community Forum</h3>
+                        <p><a href="#" class="text-decoration-none">Join our community</a></p>
+                    </div>
                 </div>
             </div>
             
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="{{ url_for('static', filename='images/team-member4.jpg') }}" alt="Maya Rodriguez">
-                </div>
-                <h3>Maya Rodriguez</h3>
-                <p class="member-role">UX Designer</p>
-                <p class="member-bio">Focused on making privacy tools accessible and user-friendly for everyone.</p>
-                <div class="member-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-headset text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h5 mb-3">Support</h3>
+                        <p><a href="#" class="text-decoration-none">Visit our help center</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="values-section alt-bg">
-    <div class="container">
-        <h2>Our Values</h2>
-        
-        <div class="values-grid">
-            <div class="value-card">
-                <div class="value-icon">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <h3>Privacy First</h3>
-                <p>We believe privacy is a fundamental right, not a feature to be sold or compromised.</p>
-            </div>
-            
-            <div class="value-card">
-                <div class="value-icon">
-                    <i class="fas fa-lightbulb"></i>
-                </div>
-                <h3>Transparency</h3>
-                <p>We're open about how our product works and what data it blocks or allows.</p>
-            </div>
-            
-            <div class="value-card">
-                <div class="value-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h3>User Empowerment</h3>
-                <p>We give users the knowledge and tools to make informed decisions about their data.</p>
-            </div>
-            
-            <div class="value-card">
-                <div class="value-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3>Continuous Improvement</h3>
-                <p>We constantly update our protection against evolving tracking techniques.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="press-section">
-    <div class="container">
-        <h2>Press & Recognition</h2>
-        
-        <div class="press-logos">
-            <div class="press-logo">
-                <img src="{{ url_for('static', filename='images/press-logo1.png') }}" alt="Tech Review">
-            </div>
-            <div class="press-logo">
-                <img src="{{ url_for('static', filename='images/press-logo2.png') }}" alt="Privacy Today">
-            </div>
-            <div class="press-logo">
-                <img src="{{ url_for('static', filename='images/press-logo3.png') }}" alt="Web Security Magazine">
-            </div>
-            <div class="press-logo">
-                <img src="{{ url_for('static', filename='images/press-logo4.png') }}" alt="Digital Trends">
-            </div>
-        </div>
-        
-        <div class="press-quotes">
-            <div class="press-quote">
-                <p>"DataShield sets a new standard for privacy extensions with its comprehensive approach and user-friendly interface."</p>
-                <cite>— Tech Review</cite>
-            </div>
-            <div class="press-quote">
-                <p>"A must-have tool for anyone concerned about their online privacy in today's data-driven world."</p>
-                <cite>— Privacy Today</cite>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="contact-section alt-bg">
-    <div class="container">
-        <h2>Get in Touch</h2>
-        <p>Have questions, feedback, or partnership inquiries? We'd love to hear from you.</p>
-        
-        <div class="contact-methods">
-            <div class="contact-method">
-                <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h3>Email Us</h3>
-                <p><a href="mailto:contact@datashield.com">contact@datashield.com</a></p>
-            </div>
-            
-            <div class="contact-method">
-                <div class="contact-icon">
-                    <i class="fas fa-comments"></i>
-                </div>
-                <h3>Community Forum</h3>
-                <p><a href="#">Join our community</a></p>
-            </div>
-            
-            <div class="contact-method">
-                <div class="contact-icon">
-                    <i class="fas fa-newspaper"></i>
-                </div>
-                <h3>Press Inquiries</h3>
-                <p><a href="mailto:press@datashield.com">press@datashield.com</a></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="cta">
-    <div class="container">
-        <h2>Join Our Mission for a More Private Internet</h2>
-        <p>Download DataShield today and take the first step toward reclaiming your online privacy.</p>
-        <a href="{{ url_for('download') }}" class="btn primary-btn">Download DataShield</a>
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Join Our Mission for a More Private Internet</h2>
+        <p class="lead mb-4">Download DataShield today and take the first step toward reclaiming your online privacy.</p>
+        <a href="{{ url_for('download') }}" class="btn btn-light btn-lg">Download DataShield</a>
     </div>
 </section>
 {% endblock %} 

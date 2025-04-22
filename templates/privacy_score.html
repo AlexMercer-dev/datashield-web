@@ -3,174 +3,218 @@
 {% block title %}Privacy Score - DataShield{% endblock %}
 
 {% block content %}
-<section class="page-header">
+<!-- Page Header -->
+<section class="py-5 bg-light mt-5">
     <div class="container">
-        <h1>Understanding Your Privacy Score</h1>
-        <p>How DataShield helps you measure and improve your online privacy</p>
-    </div>
-</section>
-
-<section class="privacy-score-explanation">
-    <div class="container">
-        <div class="explanation-content">
-            <h2>What is a Privacy Score?</h2>
-            <p>Your Privacy Score is a numerical representation of how well your online activities are protected from tracking and data collection. DataShield calculates this score based on multiple factors, giving you a clear picture of your privacy status.</p>
-            
-            <div class="score-meter">
-                <img src="{{ url_for('static', filename='images/privacy-score-meter.png') }}" alt="Privacy Score Meter">
-            </div>
-            
-            <p>The score ranges from 0 to 100:</p>
-            <ul class="score-ranges">
-                <li><span class="score-range poor">0-40:</span> Poor privacy protection. Your data is likely being collected by multiple trackers.</li>
-                <li><span class="score-range fair">41-70:</span> Fair protection. Some measures in place, but significant room for improvement.</li>
-                <li><span class="score-range good">71-90:</span> Good protection. Most tracking attempts are being blocked.</li>
-                <li><span class="score-range excellent">91-100:</span> Excellent protection. Your browsing is highly secure and private.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="score-factors alt-bg">
-    <div class="container">
-        <h2>How Your Score is Calculated</h2>
-        <p>DataShield evaluates several key factors to determine your overall Privacy Score:</p>
-        
-        <div class="factors-grid">
-            <div class="factor-card">
-                <div class="factor-icon">
-                    <i class="fas fa-user-secret"></i>
-                </div>
-                <h3>Tracker Blocking</h3>
-                <p>Measures how effectively you're blocking tracking scripts, pixels, and beacons across websites.</p>
-                <div class="factor-weight">Weight: 35%</div>
-            </div>
-            
-            <div class="factor-card">
-                <div class="factor-icon">
-                    <i class="fas fa-cookie"></i>
-                </div>
-                <h3>Cookie Management</h3>
-                <p>Evaluates your cookie settings and how well you're controlling persistent and third-party cookies.</p>
-                <div class="factor-weight">Weight: 25%</div>
-            </div>
-            
-            <div class="factor-card">
-                <div class="factor-icon">
-                    <i class="fas fa-fingerprint"></i>
-                </div>
-                <h3>Fingerprinting Protection</h3>
-                <p>Assesses your resistance to browser fingerprinting techniques that can identify you across websites.</p>
-                <div class="factor-weight">Weight: 20%</div>
-            </div>
-            
-            <div class="factor-card">
-                <div class="factor-icon">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <h3>Browsing Habits</h3>
-                <p>Analyzes the privacy practices of the websites you visit most frequently.</p>
-                <div class="factor-weight">Weight: 15%</div>
-            </div>
-            
-            <div class="factor-card">
-                <div class="factor-icon">
-                    <i class="fas fa-sliders-h"></i>
-                </div>
-                <h3>Browser Settings</h3>
-                <p>Reviews your browser's privacy settings and configurations.</p>
-                <div class="factor-weight">Weight: 5%</div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="fw-bold mb-3">Understanding Your Privacy Score</h1>
+                <p class="lead text-muted">How DataShield helps you measure and improve your online privacy</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="score-dashboard">
+<!-- Privacy Score Explanation -->
+<section class="py-5">
     <div class="container">
-        <h2>Your Privacy Dashboard</h2>
-        <p>DataShield provides a comprehensive dashboard to help you understand and improve your Privacy Score:</p>
-        
-        <div class="dashboard-preview">
-            <img src="{{ url_for('static', filename='images/dashboard-preview.png') }}" alt="Privacy Dashboard Preview">
-        </div>
-        
-        <div class="dashboard-features">
-            <div class="dashboard-feature">
-                <h3>Real-time Monitoring</h3>
-                <p>See tracking attempts as they happen and how DataShield protects you.</p>
-            </div>
-            
-            <div class="dashboard-feature">
-                <h3>Historical Trends</h3>
-                <p>Track your Privacy Score over time to see how your protection improves.</p>
-            </div>
-            
-            <div class="dashboard-feature">
-                <h3>Site-specific Analysis</h3>
-                <p>Understand which websites pose the greatest privacy risks.</p>
-            </div>
-            
-            <div class="dashboard-feature">
-                <h3>Actionable Recommendations</h3>
-                <p>Get personalized suggestions to improve your score and enhance your privacy.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="improvement-tips alt-bg">
-    <div class="container">
-        <h2>Tips to Improve Your Privacy Score</h2>
-        
-        <div class="tips-list">
-            <div class="tip">
-                <div class="tip-number">1</div>
-                <div class="tip-content">
-                    <h3>Enable Maximum Protection Mode</h3>
-                    <p>Switch DataShield to its highest protection level for comprehensive tracking prevention.</p>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="mb-4">What is a Privacy Score?</h2>
+                <p class="lead mb-4">Your Privacy Score is a numerical representation of how well your online activities are protected from tracking and data collection. DataShield calculates this score based on multiple factors, giving you a clear picture of your privacy status.</p>
+                
+                <div class="text-center mb-5">
+                    <img src="{{ url_for('static', filename='images/privacy-score-meter.png') }}" alt="Privacy Score Meter" class="img-fluid rounded shadow">
                 </div>
-            </div>
-            
-            <div class="tip">
-                <div class="tip-number">2</div>
-                <div class="tip-content">
-                    <h3>Regularly Clear Cookies</h3>
-                    <p>Set DataShield to automatically clear cookies when you close your browser.</p>
-                </div>
-            </div>
-            
-            <div class="tip">
-                <div class="tip-number">3</div>
-                <div class="tip-content">
-                    <h3>Use Privacy-Focused Search Engines</h3>
-                    <p>Switch to search engines that don't track your search history.</p>
-                </div>
-            </div>
-            
-            <div class="tip">
-                <div class="tip-number">4</div>
-                <div class="tip-content">
-                    <h3>Review Site Permissions</h3>
-                    <p>Regularly check and update which sites have permission to use cookies and trackers.</p>
-                </div>
-            </div>
-            
-            <div class="tip">
-                <div class="tip-number">5</div>
-                <div class="tip-content">
-                    <h3>Enable Anti-Fingerprinting</h3>
-                    <p>Use DataShield's advanced features to prevent browser fingerprinting.</p>
+                
+                <p class="mb-3">The score ranges from 0 to 100:</p>
+                <div class="list-group mb-5">
+                    <div class="list-group-item list-group-item-danger">
+                        <strong>0-40:</strong> Poor privacy protection. Your data is likely being collected by multiple trackers.
+                    </div>
+                    <div class="list-group-item list-group-item-warning">
+                        <strong>41-70:</strong> Fair protection. Some measures in place, but significant room for improvement.
+                    </div>
+                    <div class="list-group-item list-group-item-info">
+                        <strong>71-90:</strong> Good protection. Most tracking attempts are being blocked.
+                    </div>
+                    <div class="list-group-item list-group-item-success">
+                        <strong>91-100:</strong> Excellent protection. Your browsing is highly secure and private.
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="cta">
+<!-- Score Factors -->
+<section class="py-5 bg-light">
     <div class="container">
-        <h2>Ready to Check Your Privacy Score?</h2>
-        <p>Download DataShield now and discover how well your online privacy is protected.</p>
-        <a href="{{ url_for('download') }}" class="btn primary-btn">Download DataShield</a>
+        <h2 class="text-center mb-5">Factors That Affect Your Score</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-eye-slash text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Tracker Blocking</h3>
+                        <p class="text-muted">How effectively you're blocking tracking scripts, pixels, and beacons across websites.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-cookie text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Cookie Management</h3>
+                        <p class="text-muted">How well you're controlling which cookies are stored and for how long.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-fingerprint text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Fingerprinting Protection</h3>
+                        <p class="text-muted">How well you're preventing websites from identifying you through browser fingerprinting.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-history text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Browsing History</h3>
+                        <p class="text-muted">How frequently you clear your browsing history and cached data.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-search text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Search Engine</h3>
+                        <p class="text-muted">Whether you're using privacy-focused search engines that don't track your searches.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-user-secret text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Social Media Integration</h3>
+                        <p class="text-muted">How connected your browsing is to social media platforms that track your activity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Score Dashboard -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="mb-4">Your Privacy Dashboard</h2>
+                <p class="lead mb-4">DataShield provides a comprehensive dashboard that shows your current Privacy Score and breaks down each contributing factor.</p>
+                <p class="mb-4">The dashboard updates in real-time as you browse, giving you immediate feedback on how your actions affect your privacy. You can also see a history of your score over time, helping you track your progress.</p>
+                <a href="{{ url_for('download') }}" class="btn btn-primary">Try the Dashboard</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='images/privacy-score-detail.png') }}" alt="Privacy Score Dashboard" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Improvement Tips -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">5 Tips to Improve Your Privacy Score</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex">
+                            <div class="bg-primary text-white rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">1</div>
+                            <div>
+                                <h3 class="h5 mb-2">Enable Maximum Protection</h3>
+                                <p class="text-muted mb-0">Use DataShield's highest protection level for all websites by default.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex">
+                            <div class="bg-primary text-white rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">2</div>
+                            <div>
+                                <h3 class="h5 mb-2">Regularly Clear Cookies</h3>
+                                <p class="text-muted mb-0">Set DataShield to automatically clear cookies when you close your browser.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex">
+                            <div class="bg-primary text-white rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">3</div>
+                            <div>
+                                <h3 class="h5 mb-2">Use Private Search Engines</h3>
+                                <p class="text-muted mb-0">Switch to search engines that don't track your search history.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex">
+                            <div class="bg-primary text-white rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">4</div>
+                            <div>
+                                <h3 class="h5 mb-2">Review Site Permissions</h3>
+                                <p class="text-muted mb-0">Regularly check and update which sites have permission to use cookies and trackers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex">
+                            <div class="bg-primary text-white rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">5</div>
+                            <div>
+                                <h3 class="h5 mb-2">Enable Anti-Fingerprinting</h3>
+                                <p class="text-muted mb-0">Use DataShield's advanced features to prevent browser fingerprinting.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Check Your Privacy Score?</h2>
+        <p class="lead mb-4">Download DataShield now and discover how well your online privacy is protected.</p>
+        <a href="{{ url_for('download') }}" class="btn btn-light btn-lg">Download DataShield</a>
     </div>
 </section>
 {% endblock %} 
