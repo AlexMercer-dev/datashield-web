@@ -25,10 +25,7 @@
                         <img src="{{ url_for('static', filename='images/chrome-icon.png') }}" alt="Google Chrome" class="img-fluid mb-4" style="max-height: 80px;">
                         <h3 class="h4 mb-3">Chrome Extension</h3>
                         <p class="text-muted mb-4">Compatible with Chrome 70+</p>
-                        <a href="#" class="btn btn-primary mb-2">Download for Chrome</a>
-                        <div>
-                            <a href="#" class="text-decoration-none small">Available on Chrome Web Store</a>
-                        </div>
+                        <a href="{{ url_for('download_extension', browser='chrome') }}" class="btn btn-primary mb-2">Download for Chrome</a>
                     </div>
                 </div>
             </div>
@@ -39,10 +36,7 @@
                         <img src="{{ url_for('static', filename='images/firefox-icon.png') }}" alt="Mozilla Firefox" class="img-fluid mb-4" style="max-height: 80px;">
                         <h3 class="h4 mb-3">Firefox Add-on</h3>
                         <p class="text-muted mb-4">Compatible with Firefox 60+</p>
-                        <a href="#" class="btn btn-primary mb-2">Download for Firefox</a>
-                        <div>
-                            <a href="#" class="text-decoration-none small">Available on Firefox Add-ons</a>
-                        </div>
+                        <a href="{{ url_for('download_extension', browser='firefox') }}" class="btn btn-primary mb-2">Download for Firefox</a>
                     </div>
                 </div>
             </div>
@@ -53,10 +47,7 @@
                         <img src="{{ url_for('static', filename='images/edge-icon.png') }}" alt="Microsoft Edge" class="img-fluid mb-4" style="max-height: 80px;">
                         <h3 class="h4 mb-3">Edge Extension</h3>
                         <p class="text-muted mb-4">Compatible with Edge 79+</p>
-                        <a href="#" class="btn btn-primary mb-2">Download for Edge</a>
-                        <div>
-                            <a href="#" class="text-decoration-none small">Available on Edge Add-ons</a>
-                        </div>
+                        <a href="{{ url_for('download_extension', browser='edge') }}" class="btn btn-primary mb-2">Download for Edge</a>
                     </div>
                 </div>
             </div>
@@ -67,10 +58,7 @@
                         <img src="{{ url_for('static', filename='images/safari-icon.png') }}" alt="Apple Safari" class="img-fluid mb-4" style="max-height: 80px;">
                         <h3 class="h4 mb-3">Safari Extension</h3>
                         <p class="text-muted mb-4">Compatible with Safari 14+</p>
-                        <a href="#" class="btn btn-primary mb-2">Download for Safari</a>
-                        <div>
-                            <a href="#" class="text-decoration-none small">Available on App Store</a>
-                        </div>
+                        <a href="{{ url_for('download_extension', browser='safari') }}" class="btn btn-primary mb-2">Download for Safari</a>
                     </div>
                 </div>
             </div>
@@ -247,7 +235,7 @@
     <div class="container text-center">
         <h2 class="mb-4">Ready to Enhance Your Privacy?</h2>
         <p class="lead mb-4">Join thousands of users who have already taken control of their online privacy with DataShield.</p>
-        <a href="#" class="btn btn-light btn-lg">Download Now</a>
+        <a href="{{ url_for('download_extension', browser='any') }}" class="btn btn-light btn-lg">Download Now</a>
     </div>
 </section>
 {% endblock %} 
