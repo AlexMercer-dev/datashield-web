@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5001:80"
+    volumes:
+      - ./templates:/app/templates
+      - ./static:/app/static
+      - ./app.py:/app/app.py
+    environment:
+      - FLASK_ENV=development
+    restart: always 
