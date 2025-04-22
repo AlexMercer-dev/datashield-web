@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+
+{% block title %}Download DataShield{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Download DataShield</h1>
+        <p>Get started with DataShield and take control of your online privacy</p>
+    </div>
+</section>
+
+<section class="download-options">
+    <div class="container">
+        <div class="browser-options">
+            <div class="browser-option">
+                <div class="browser-icon">
+                    <img src="{{ url_for('static', filename='images/chrome-icon.png') }}" alt="Google Chrome">
+                </div>
+                <h3>Chrome Extension</h3>
+                <p>Compatible with Chrome 70+</p>
+                <a href="#" class="btn primary-btn">Download for Chrome</a>
+                <div class="store-link">
+                    <a href="#">Available on Chrome Web Store</a>
+                </div>
+            </div>
+            
+            <div class="browser-option">
+                <div class="browser-icon">
+                    <img src="{{ url_for('static', filename='images/firefox-icon.png') }}" alt="Mozilla Firefox">
+                </div>
+                <h3>Firefox Add-on</h3>
+                <p>Compatible with Firefox 60+</p>
+                <a href="#" class="btn primary-btn">Download for Firefox</a>
+                <div class="store-link">
+                    <a href="#">Available on Firefox Add-ons</a>
+                </div>
+            </div>
+            
+            <div class="browser-option">
+                <div class="browser-icon">
+                    <img src="{{ url_for('static', filename='images/edge-icon.png') }}" alt="Microsoft Edge">
+                </div>
+                <h3>Edge Extension</h3>
+                <p>Compatible with Edge 79+</p>
+                <a href="#" class="btn primary-btn">Download for Edge</a>
+                <div class="store-link">
+                    <a href="#">Available on Microsoft Store</a>
+                </div>
+            </div>
+            
+            <div class="browser-option">
+                <div class="browser-icon">
+                    <img src="{{ url_for('static', filename='images/safari-icon.png') }}" alt="Safari">
+                </div>
+                <h3>Safari Extension</h3>
+                <p>Compatible with Safari 14+</p>
+                <a href="#" class="btn primary-btn">Download for Safari</a>
+                <div class="store-link">
+                    <a href="#">Available on App Store</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="installation-guide alt-bg">
+    <div class="container">
+        <h2>Installation Guide</h2>
+        
+        <div class="installation-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Download the Extension</h3>
+                    <p>Click the download button for your browser above or visit your browser's extension store.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Add to Browser</h3>
+                    <p>Click "Add to [Browser]" when prompted to install the extension.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Configure Settings</h3>
+                    <p>Click on the DataShield icon in your browser toolbar to access settings and customize your protection level.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Start Browsing Securely</h3>
+                    <p>That's it! DataShield is now protecting your privacy as you browse.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-tutorial">
+            <h3>Video Tutorial</h3>
+            <div class="video-container">
+                <img src="{{ url_for('static', filename='images/video-placeholder.jpg') }}" alt="Installation Video Tutorial">
+                <div class="play-button">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="system-requirements">
+    <div class="container">
+        <h2>System Requirements</h2>
+        
+        <div class="requirements-table-wrapper">
+            <table class="requirements-table">
+                <thead>
+                    <tr>
+                        <th>Browser</th>
+                        <th>Minimum Version</th>
+                        <th>Recommended Version</th>
+                        <th>Operating System</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Google Chrome</td>
+                        <td>70+</td>
+                        <td>90+</td>
+                        <td>Windows 7+, macOS 10.11+, Linux, Android 5+</td>
+                    </tr>
+                    <tr>
+                        <td>Mozilla Firefox</td>
+                        <td>60+</td>
+                        <td>85+</td>
+                        <td>Windows 7+, macOS 10.12+, Linux</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft Edge</td>
+                        <td>79+</td>
+                        <td>90+</td>
+                        <td>Windows 10+, macOS 10.12+</td>
+                    </tr>
+                    <tr>
+                        <td>Safari</td>
+                        <td>14+</td>
+                        <td>15+</td>
+                        <td>macOS 10.15+, iOS 14+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="faq alt-bg">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Is DataShield free to use?</h3>
+                    <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <p>Yes, DataShield is completely free for personal use. We also offer a premium version with additional features for power users.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Will DataShield slow down my browsing?</h3>
+                    <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <p>DataShield is designed to have minimal impact on browsing performance. In fact, by blocking trackers and unnecessary scripts, it may actually make some websites load faster.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Can I use DataShield with other privacy extensions?</h3>
+                    <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <p>Yes, DataShield can work alongside other privacy tools. However, some features may overlap, and we recommend adjusting settings to avoid conflicts.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Does DataShield collect any of my data?</h3>
+                    <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <p>No, DataShield is committed to your privacy. We do not collect any browsing data or personal information. The extension operates entirely on your device.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Ready to Enhance Your Privacy?</h2>
+        <p>Join thousands of users who have already taken control of their online privacy with DataShield.</p>
+        <a href="#" class="btn primary-btn">Download Now</a>
+    </div>
+</section>
+{% endblock %} 

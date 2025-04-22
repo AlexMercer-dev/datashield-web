@@ -1,0 +1,347 @@
+/* Custom styles to complement Bootstrap */
+
+/* Add padding to account for fixed navbar */
+body {
+    padding-top: 76px;
+}
+
+/* Custom primary color */
+.btn-primary, 
+.bg-primary {
+    background-color: #4a6cf7 !important;
+    border-color: #4a6cf7 !important;
+}
+
+.text-primary {
+    color: #4a6cf7 !important;
+}
+
+.btn-outline-primary {
+    color: #4a6cf7 !important;
+    border-color: #4a6cf7 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #4a6cf7 !important;
+    color: white !important;
+}
+
+/* Custom styling for cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Custom styling for feature icons */
+.fa-3x {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .fa-3x {
+    transform: scale(1.2);
+}
+
+/* Custom styling for testimonial carousel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #4a6cf7;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: -20px;
+}
+
+.carousel-control-next {
+    right: -20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Timeline styling for About page */
+.timeline {
+    position: relative;
+    padding-left: 50px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e9ecef;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-date {
+    position: absolute;
+    left: -50px;
+    width: 40px;
+    height: 40px;
+    background-color: #4a6cf7;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Accordion styling for FAQ */
+.accordion-button:not(.collapsed) {
+    background-color: #eef2ff;
+    color: #4a6cf7;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(74, 108, 247, 0.25);
+}
+
+/* Continuing from previous CSS */
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.contact-method {
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.contact-method h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.contact-method p {
+    color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-links h3,
+.footer-social h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links ul li a:hover {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero .container,
+    .privacy-score-preview .container,
+    .feature-row,
+    .about-mission .container {
+        flex-direction: column;
+    }
+    
+    .hero-content,
+    .privacy-score-content,
+    .feature-content,
+    .mission-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .feature-row.reverse {
+        flex-direction: column;
+    }
+    
+    .testimonial {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin-bottom: 20px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 15px 10px;
+    }
+    
+    .hero-content h1,
+    .privacy-score-content h2,
+    .feature-content h2,
+    .page-header h1,
+    .features-overview h2,
+    .testimonials h2,
+    .cta h2,
+    .mission-content h2,
+    .about-story h2,
+    .team-section h2,
+    .values-section h2,
+    .press-section h2,
+    .contact-section h2,
+    .privacy-score-explanation h2,
+    .score-factors h2,
+    .score-dashboard h2,
+    .improvement-tips h2,
+    .installation-guide h2,
+    .system-requirements h2,
+    .faq h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-card,
+    .testimonial,
+    .browser-option,
+    .factor-card,
+    .team-member,
+    .value-card,
+    .contact-method {
+        padding: 20px;
+    }
+    
+    .feature-icon,
+    .factor-icon,
+    .value-icon,
+    .contact-icon {
+        font-size: 2rem;
+    }
+    
+    .feature-card h3,
+    .factor-card h3,
+    .value-card h3,
+    .contact-method h3,
+    .browser-option h3 {
+        font-size: 1.3rem;
+    }
+    
+    .timeline:before {
+        left: 15px;
+    }
+    
+    .timeline-date {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    
+    .timeline-item {
+        padding-left: 45px;
+    }
+} 

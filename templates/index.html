@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h1 class="display-4 fw-bold mb-4">Take Control of Your Online Privacy</h1>
+                <p class="lead mb-4">DataShield is a powerful browser extension that blocks trackers, manages cookies, and enhances your browsing privacy.</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="{{ url_for('download') }}" class="btn btn-primary btn-lg">Download Now</a>
+                    <a href="{{ url_for('features') }}" class="btn btn-outline-secondary btn-lg">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='images/hero-image.png') }}" alt="DataShield Dashboard" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Overview -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose DataShield?</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-shield-alt text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Block Trackers</h3>
+                        <p class="text-muted">Stop websites from tracking your online behavior and collecting your personal data.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-cookie-bite text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Cookie Management</h3>
+                        <p class="text-muted">Take control of which cookies are stored and for how long.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-4">
+                            <i class="fas fa-chart-line text-primary fa-3x"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Privacy Reports</h3>
+                        <p class="text-muted">Get detailed insights about your privacy status and potential vulnerabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Privacy Score Preview -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="mb-4">Know Your Privacy Score</h2>
+                <p class="lead mb-4">DataShield analyzes your browsing habits and security settings to generate a personalized privacy score, helping you identify areas for improvement.</p>
+                <a href="{{ url_for('privacy_score') }}" class="btn btn-primary">Learn About Privacy Scores</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='images/privacy-score.png') }}" alt="Privacy Score Dashboard" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Users Say</h2>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-5">
+                                    <p class="lead mb-4">"DataShield has completely changed how I browse the web. I feel much more secure knowing my data is protected."</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="{{ url_for('static', filename='images/user1.jpg') }}" alt="User 1" class="rounded-circle me-3" width="60">
+                                        <div>
+                                            <h5 class="mb-1">Sarah Johnson</h5>
+                                            <p class="text-muted mb-0">Web Developer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-5">
+                                    <p class="lead mb-4">"The privacy reports are incredibly detailed and have helped me understand which websites to avoid."</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="{{ url_for('static', filename='images/user2.jpg') }}" alt="User 2" class="rounded-circle me-3" width="60">
+                                        <div>
+                                            <h5 class="mb-1">Michael Chen</h5>
+                                            <p class="text-muted mb-0">IT Specialist</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Protect Your Privacy?</h2>
+        <p class="lead mb-4">Join thousands of users who have already enhanced their online privacy with DataShield.</p>
+        <a href="{{ url_for('download') }}" class="btn btn-light btn-lg">Download DataShield Now</a>
+    </div>
+</section>
+{% endblock %} 
