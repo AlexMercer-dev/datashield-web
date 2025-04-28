@@ -22,6 +22,10 @@ def download():
 def about():
     return render_template('about.html')
 
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+
 @app.route('/servers-down')
 def servers_down():
     return render_template('servers_down.html')
