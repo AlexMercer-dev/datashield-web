@@ -1,0 +1,325 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog - DataShield{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="py-5 bg-light mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="fw-bold mb-3">DataShield Blog</h1>
+                <p class="lead text-muted">Privacy tips, updates, and insights from our team</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Filter and Search -->
+<section class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="input-group mb-3">
+                    <input type="text" id="blog-search" class="form-control" placeholder="Search articles...">
+                    <button class="btn btn-primary" type="button" id="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <select class="form-select" id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="privacy-tips">Privacy Tips</option>
+                    <option value="updates">Product Updates</option>
+                    <option value="security">Security News</option>
+                    <option value="guides">How-to Guides</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Article -->
+<section class="py-4">
+    <div class="container">
+        <div class="card border-0 shadow-sm overflow-hidden mb-5">
+            <div class="row g-0">
+                <div class="col-lg-6">
+                    <img src="{{ url_for('static', filename='images/blog-featured.jpg') }}" alt="Featured Article" class="img-fluid h-100 object-fit-cover">
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-primary me-2">Featured</span>
+                            <span class="badge bg-secondary me-2">Privacy Tips</span>
+                            <small class="text-muted">May 15, 2023</small>
+                        </div>
+                        <h2 class="card-title h3 mb-3">10 Essential Privacy Practices Everyone Should Follow</h2>
+                        <p class="card-text mb-4">In today's digital landscape, protecting your privacy is more important than ever. Learn the essential practices that can significantly enhance your online privacy and security.</p>
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="{{ url_for('static', filename='images/team-member2.jpg') }}" alt="Sarah Johnson" class="rounded-circle me-2" width="40" height="40">
+                            <span>By Sarah Johnson</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary">Read Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Articles -->
+<section class="py-4">
+    <div class="container">
+        <div class="row g-4" id="blog-posts">
+            <!-- Article 1 -->
+            <div class="col-md-6 col-lg-4 blog-post" data-category="updates">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="{{ url_for('static', filename='images/blog-post1.jpg') }}" class="card-img-top" alt="DataShield 2.0 Release">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-secondary me-2">Product Updates</span>
+                            <small class="text-muted">May 10, 2023</small>
+                        </div>
+                        <h3 class="card-title h5 mb-3">Introducing DataShield 2.0: More Powerful Privacy Protection</h3>
+                        <p class="card-text">We're excited to announce the release of DataShield 2.0, featuring enhanced tracker blocking, improved cookie management, and a redesigned interface.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article 2 -->
+            <div class="col-md-6 col-lg-4 blog-post" data-category="privacy-tips">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="{{ url_for('static', filename='images/blog-post2.jpg') }}" class="card-img-top" alt="Password Managers">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-secondary me-2">Privacy Tips</span>
+                            <small class="text-muted">May 5, 2023</small>
+                        </div>
+                        <h3 class="card-title h5 mb-3">Why You Should Be Using a Password Manager</h3>
+                        <p class="card-text">Password managers are essential tools for maintaining strong, unique passwords across all your accounts. Learn why they're crucial for your online security.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article 3 -->
+            <div class="col-md-6 col-lg-4 blog-post" data-category="security">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="{{ url_for('static', filename='images/blog-post3.jpg') }}" class="card-img-top" alt="Data Breaches">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-secondary me-2">Security News</span>
+                            <small class="text-muted">April 28, 2023</small>
+                        </div>
+                        <h3 class="card-title h5 mb-3">Recent Data Breaches and How to Protect Yourself</h3>
+                        <p class="card-text">Several major companies have experienced data breaches in recent months. Here's what you need to know and how to check if your data was compromised.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article 4 -->
+            <div class="col-md-6 col-lg-4 blog-post" data-category="guides">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="{{ url_for('static', filename='images/blog-post4.jpg') }}" class="card-img-top" alt="Browser Settings">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-secondary me-2">How-to Guides</span>
+                            <small class="text-muted">April 20, 2023</small>
+                        </div>
+                        <h3 class="card-title h5 mb-3">Optimizing Your Browser Settings for Privacy</h3>
+                        <p class="card-text">Most browsers have built-in privacy settings that are often overlooked. Learn how to configure your browser for enhanced privacy protection.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article 5 -->
+            <div class="col-md-6 col-lg-4 blog-post" data-category="privacy-tips">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="{{ url_for('static', filename='images/blog-post5.jpg') }}" class="card-img-top" alt="Social Media Privacy">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-secondary me-2">Privacy Tips</span>
+                            <small class="text-muted">April 15, 2023</small>
+                        </div>
+                        <h3 class="card-title h5 mb-3">Securing Your Social Media Accounts</h3>
+                        <p class="card-text">Social media platforms collect vast amounts of data. Discover how to minimize your digital footprint while still enjoying social media.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article 6 -->
+            <div class="col-md-6 col-lg-4 blog-post" data-category="updates">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="{{ url_for('static', filename='images/blog-post6.jpg') }}" class="card-img-top" alt="Mobile App">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-secondary me-2">Product Updates</span>
+                            <small class="text-muted">April 8, 2023</small>
+                        </div>
+                        <h3 class="card-title h5 mb-3">Coming Soon: DataShield Mobile App</h3>
+                        <p class="card-text">We're excited to announce that we're developing a DataShield mobile app to bring our privacy protection to your smartphones and tablets.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- No Results Message -->
+        <div id="no-results" class="text-center py-5 d-none">
+            <i class="fas fa-search fa-3x text-muted mb-3"></i>
+            <h3>No articles found</h3>
+            <p class="text-muted">Try adjusting your search or filter criteria</p>
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="text-center mt-5">
+            <button id="load-more" class="btn btn-outline-primary btn-lg">Load More Articles</button>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Signup -->
+<section class="py-5 bg-light mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Subscribe to Our Newsletter</h2>
+                <p class="lead mb-4">Get the latest privacy tips and DataShield updates delivered to your inbox.</p>
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <form class="d-flex">
+                            <input type="email" class="form-control me-2" placeholder="Your email address">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                        <small class="text-muted mt-2">We respect your privacy and will never share your email address.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Blog Functionality -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Elements
+        const blogPosts = document.querySelectorAll('.blog-post');
+        const searchInput = document.getElementById('blog-search');
+        const searchButton = document.getElementById('search-button');
+        const categoryFilter = document.getElementById('category-filter');
+        const noResults = document.getElementById('no-results');
+        const loadMoreButton = document.getElementById('load-more');
+        
+        // Initial state
+        let visiblePosts = 6;
+        const postsPerLoad = 3;
+        
+        // Function to filter posts
+        function filterPosts() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const category = categoryFilter.value;
+            let matchCount = 0;
+            
+            blogPosts.forEach((post, index) => {
+                const postCategory = post.getAttribute('data-category');
+                const postContent = post.textContent.toLowerCase();
+                const categoryMatch = category === 'all' || postCategory === category;
+                const searchMatch = searchTerm === '' || postContent.includes(searchTerm);
+                
+                if (categoryMatch && searchMatch) {
+                    matchCount++;
+                    if (matchCount <= visiblePosts) {
+                        post.style.display = 'block';
+                    } else {
+                        post.style.display = 'none';
+                    }
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            if (matchCount === 0) {
+                noResults.classList.remove('d-none');
+            } else {
+                noResults.classList.add('d-none');
+            }
+            
+            // Show/hide load more button
+            if (matchCount <= visiblePosts) {
+                loadMoreButton.style.display = 'none';
+            } else {
+                loadMoreButton.style.display = 'inline-block';
+            }
+        }
+        
+        // Event listeners
+        searchButton.addEventListener('click', function() {
+            visiblePosts = 6; // Reset visible posts when searching
+            filterPosts();
+        });
+        
+        searchInput.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                visiblePosts = 6; // Reset visible posts when searching
+                filterPosts();
+            }
+        });
+        
+        categoryFilter.addEventListener('change', function() {
+            visiblePosts = 6; // Reset visible posts when changing category
+            filterPosts();
+        });
+        
+        loadMoreButton.addEventListener('click', function() {
+            visiblePosts += postsPerLoad;
+            filterPosts();
+        });
+        
+        // Initialize
+        filterPosts();
+        
+        // Animate posts on scroll
+        const animatePosts = function() {
+            blogPosts.forEach(post => {
+                const postPosition = post.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (postPosition < screenPosition) {
+                    post.style.opacity = 1;
+                    post.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial styles for animation
+        blogPosts.forEach(post => {
+            post.style.opacity = 0;
+            post.style.transform = 'translateY(20px)';
+            post.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        // Run animation on load and scroll
+        window.addEventListener('scroll', animatePosts);
+        animatePosts(); // Run once on page load
+    });
+</script>
+{% endblock %} 
