@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
@@ -21,6 +21,16 @@ def download():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/servers-down')
+def servers_down():
+    return render_template('servers_down.html')
+
+@app.route('/download-extension/<browser>')
+def download_extension(browser):
+    # This would normally handle the download logic
+    # Instead, we redirect to the servers down page
+    return redirect(url_for('servers_down'))
 
 if __name__ == '__main__':
     #app.run(debug=True) 

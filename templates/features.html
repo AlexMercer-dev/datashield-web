@@ -3,136 +3,115 @@
 {% block title %}Features - DataShield{% endblock %}
 
 {% block content %}
-<section class="page-header">
+<!-- Page Header -->
+<section class="py-5 bg-light mt-5">
     <div class="container">
-        <h1>DataShield Features</h1>
-        <p>Discover how DataShield protects your privacy online</p>
-    </div>
-</section>
-
-<section class="feature-detail">
-    <div class="container">
-        <div class="feature-row">
-            <div class="feature-content">
-                <h2>Advanced Tracker Blocking</h2>
-                <p>DataShield uses sophisticated algorithms to identify and block tracking scripts from advertisers, social media platforms, and data brokers.</p>
-                <ul class="feature-list">
-                    <li>Blocks third-party trackers automatically</li>
-                    <li>Prevents fingerprinting techniques</li>
-                    <li>Stops invisible pixels and beacons</li>
-                    <li>Customizable blocking levels</li>
-                </ul>
-            </div>
-            <div class="feature-image">
-                <img src="{{ url_for('static', filename='images/tracker-blocking.png') }}" alt="Tracker Blocking">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="fw-bold mb-3">DataShield Features</h1>
+                <p class="lead text-muted">Discover how DataShield protects your privacy online</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="feature-detail alt-bg">
+<!-- Feature Detail -->
+<section class="py-5">
     <div class="container">
-        <div class="feature-row reverse">
-            <div class="feature-content">
-                <h2>Intelligent Cookie Management</h2>
-                <p>Take control of how websites use cookies to track your activity and store information about you.</p>
-                <ul class="feature-list">
-                    <li>Auto-delete cookies when you close your browser</li>
-                    <li>Whitelist essential cookies for your favorite sites</li>
-                    <li>Block third-party cookies by default</li>
-                    <li>Detailed cookie information and management</li>
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="mb-4">Advanced Tracker Blocking</h2>
+                <p class="mb-4">DataShield uses sophisticated algorithms to identify and block tracking scripts from advertisers, social media platforms, and data brokers.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Blocks third-party trackers automatically</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Prevents fingerprinting techniques</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Stops invisible pixels and beacons</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Customizable blocking levels</li>
                 </ul>
             </div>
-            <div class="feature-image">
-                <img src="{{ url_for('static', filename='images/cookie-management.png') }}" alt="Cookie Management">
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='images/tracker-blocking.png') }}" alt="Tracker Blocking" class="img-fluid rounded shadow">
+            </div>
+        </div>
+        
+        <div class="row align-items-center mb-5 flex-lg-row-reverse">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="mb-4">Intelligent Cookie Management</h2>
+                <p class="mb-4">Take control of how websites use cookies to track your activity and store information about your browsing habits.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Auto-delete cookies when you close your browser</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Whitelist cookies from trusted websites</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Block third-party cookies</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Set custom expiration dates</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='images/cookie-management.png') }}" alt="Cookie Management" class="img-fluid rounded shadow">
+            </div>
+        </div>
+        
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="mb-4">Comprehensive Privacy Reports</h2>
+                <p class="mb-4">Get detailed insights into your online privacy status with easy-to-understand reports and recommendations.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Track blocked elements in real-time</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> View privacy score for each website</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Receive personalized recommendations</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Export reports for analysis</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='images/privacy-reports.png') }}" alt="Privacy Reports" class="img-fluid rounded shadow">
             </div>
         </div>
     </div>
 </section>
 
-<section class="feature-detail">
+<!-- Feature Comparison -->
+<section class="py-5 bg-light">
     <div class="container">
-        <div class="feature-row">
-            <div class="feature-content">
-                <h2>Comprehensive Privacy Reports</h2>
-                <p>Get detailed insights about your online privacy status and potential vulnerabilities.</p>
-                <ul class="feature-list">
-                    <li>Real-time tracking attempts dashboard</li>
-                    <li>Weekly privacy summary reports</li>
-                    <li>Site-specific privacy analysis</li>
-                    <li>Personalized recommendations for improvement</li>
-                </ul>
-            </div>
-            <div class="feature-image">
-                <img src="{{ url_for('static', filename='images/privacy-reports.png') }}" alt="Privacy Reports">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="feature-detail alt-bg">
-    <div class="container">
-        <div class="feature-row reverse">
-            <div class="feature-content">
-                <h2>Privacy Score</h2>
-                <p>DataShield analyzes your browsing habits and security settings to generate a personalized privacy score.</p>
-                <ul class="feature-list">
-                    <li>Overall privacy rating from 0-100</li>
-                    <li>Breakdown by category (tracking, cookies, etc.)</li>
-                    <li>Historical trends to track improvement</li>
-                    <li>Benchmarking against average users</li>
-                </ul>
-            </div>
-            <div class="feature-image">
-                <img src="{{ url_for('static', filename='images/privacy-score-detail.png') }}" alt="Privacy Score">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="feature-comparison">
-    <div class="container">
-        <h2>How DataShield Compares</h2>
-        <div class="comparison-table-wrapper">
-            <table class="comparison-table">
-                <thead>
+        <h2 class="text-center mb-5">How DataShield Compares</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered bg-white">
+                <thead class="bg-primary text-white">
                     <tr>
                         <th>Feature</th>
                         <th>DataShield</th>
                         <th>Basic Ad Blockers</th>
-                        <th>Other Privacy Extensions</th>
+                        <th>Other Privacy Tools</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Tracker Blocking</td>
-                        <td><i class="fas fa-check"></i> Advanced</td>
-                        <td><i class="fas fa-check"></i> Basic</td>
-                        <td><i class="fas fa-check"></i> Varies</td>
+                        <td><i class="fas fa-check text-success"></i> Advanced</td>
+                        <td><i class="fas fa-check text-success"></i> Basic</td>
+                        <td><i class="fas fa-check text-success"></i> Varies</td>
                     </tr>
                     <tr>
                         <td>Cookie Management</td>
-                        <td><i class="fas fa-check"></i> Comprehensive</td>
-                        <td><i class="fas fa-times"></i> No</td>
-                        <td><i class="fas fa-check"></i> Basic</td>
+                        <td><i class="fas fa-check text-success"></i> Comprehensive</td>
+                        <td><i class="fas fa-times text-danger"></i> No</td>
+                        <td><i class="fas fa-check text-success"></i> Basic</td>
                     </tr>
                     <tr>
                         <td>Privacy Reports</td>
-                        <td><i class="fas fa-check"></i> Detailed</td>
-                        <td><i class="fas fa-times"></i> No</td>
-                        <td><i class="fas fa-check"></i> Limited</td>
+                        <td><i class="fas fa-check text-success"></i> Detailed</td>
+                        <td><i class="fas fa-times text-danger"></i> No</td>
+                        <td><i class="fas fa-check text-success"></i> Limited</td>
                     </tr>
                     <tr>
                         <td>Privacy Score</td>
-                        <td><i class="fas fa-check"></i> Yes</td>
-                        <td><i class="fas fa-times"></i> No</td>
-                        <td><i class="fas fa-times"></i> Rarely</td>
+                        <td><i class="fas fa-check text-success"></i> Yes</td>
+                        <td><i class="fas fa-times text-danger"></i> No</td>
+                        <td><i class="fas fa-times text-danger"></i> Rarely</td>
                     </tr>
                     <tr>
                         <td>Performance Impact</td>
-                        <td><i class="fas fa-check"></i> Minimal</td>
-                        <td><i class="fas fa-check"></i> Minimal</td>
-                        <td><i class="fas fa-times"></i> Often High</td>
+                        <td><i class="fas fa-check text-success"></i> Minimal</td>
+                        <td><i class="fas fa-check text-success"></i> Minimal</td>
+                        <td><i class="fas fa-times text-danger"></i> Often High</td>
                     </tr>
                 </tbody>
             </table>
@@ -140,11 +119,12 @@
     </div>
 </section>
 
-<section class="cta">
-    <div class="container">
-        <h2>Ready to Experience These Features?</h2>
-        <p>Download DataShield now and take control of your online privacy.</p>
-        <a href="{{ url_for('download') }}" class="btn primary-btn">Download DataShield</a>
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Experience These Features?</h2>
+        <p class="lead mb-4">Download DataShield now and take control of your online privacy.</p>
+        <a href="{{ url_for('download') }}" class="btn btn-light btn-lg">Download DataShield</a>
     </div>
 </section>
 {% endblock %} 

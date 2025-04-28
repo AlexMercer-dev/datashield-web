@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Servers Down - DataShield{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="py-5 bg-light mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="fw-bold mb-3">Our Servers Are Down</h1>
+                <p class="lead text-muted">We're experiencing technical difficulties</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="card border-0 shadow-sm mb-5">
+                    <div class="card-body p-5">
+                        <div class="mb-4">
+                            <i class="fas fa-server text-primary fa-5x"></i>
+                        </div>
+                        <h2 class="h3 mb-4">Our download servers are currently unavailable</h2>
+                        <p class="lead mb-4">We're working hard to resolve this issue. Please check back later to download DataShield.</p>
+                        <p class="text-muted mb-5">We apologize for any inconvenience this may cause. Our team is working to restore service as quickly as possible.</p>
+                        <a href="{{ url_for('home') }}" class="btn btn-primary btn-lg">Return to Homepage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 
