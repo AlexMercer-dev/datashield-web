@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - DataShield</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <span class="logo-text">DataShield</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="features.html">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="privacy_score.html">Privacy Score</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary ms-2" href="download.html">Download</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+<!-- Page Header -->
+<section class="py-5 bg-light mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="fw-bold mb-3">DataShield Blog</h1>
+                <p class="lead text-muted">Privacy tips, updates, and insights from our team</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Filter and Search -->
+<section class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="input-group mb-3">
+                    <input type="text" id="blog-search" class="form-control" placeholder="Search articles...">
+                    <button class="btn btn-primary" type="button" id="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <select class="form-select" id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="privacy-tips">Privacy Tips</option>
+                    <option value="updates">Product Updates</option>
+                    <option value="security">Security News</option>
+                    <option value="guides">How-to Guides</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Article -->
+<section class="py-4">
+    <div class="container">
+        <div class="card border-0 shadow-sm overflow-hidden mb-5">
+            <div class="row g-0">
+                <div class="col-lg-6">
+                    <div class="featured-article-image bg-gradient-primary d-flex align-items-center justify-content-center text-white" style="height: 100%; min-height: 300px;">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-4x mb-3"></i>
+                            <h4>Featured Article</h4>
+                            <div class="ascii-art small">
+<pre>
+  _____      _                  
+ |  __ \    (_)                 
+ | |__) | __ ___   ____ _  ___ _   _ 
+ |  ___/ '__| \ \ / / _` |/ __| | | |
+ | |   | |  | |\ V / (_| | (__| |_| |
+ |_|   |_|  |_| \_/ \__,_|\___|\__, |
+                                __/ |
+                               |___/ 
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-primary me-2">Featured</span>
+                            <span class="badge bg-secondary me-2">Privacy Tips</span>
+                            <small class="text-muted">May 15, 2023</small>
+                        </div>
+                        <h2 class="card-title h3 mb-3">10 Essential Privacy Practices Everyone Should Follow</h2>
+                        <p class="card-text mb-4">In today's digital landscape, protecting your privacy is more important than ever. Learn the essential practices that can significantly enhance your online privacy and security.</p>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="team-avatar team-avatar-sm me-2">SJ</div>
+                            <span>By Sarah Johnson</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary">Read Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Articles -->
+<section class="py-4">
+    <div class="container">
+        <div class="row g-4" id="blog-posts">
+            <!-- Article 1 -->
+            <div class="col-md-6 col-lg-4 blog-post" data-category="updates">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="blog-post-image bg-gradient-blue text-white d-flex align-items-center justify-content-center p-4" style="height: 200px;">
+                        <div class="text-center">
+                            <i class="fas fa-rocket fa-3x mb-3"></i>
+                            <h5>Product Update</h5>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-secondary me-2">Product Updates</span>
+                            <small class="text-muted">May 10, 2023</small>
+                        </div>
+                        <h3 class="card-title h5 mb-3">Introducing DataShield 2.0: More Powerful Privacy Protection</h3>
+                        <p class="card-text">We're excited to announce the release of DataShield 2.0, featuring enhanced tracker blocking, improved cookie management, and a redesigned interface.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article 2 -->
+            <div class="col-md-6 col-lg-4 blog-post" data-category="privacy-tips">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="blog-post-image bg-gradient-green text-white d-flex align-items-center justify-content-center p-4" style="height: 200px;">
+                        <div class="text-center">
+                            <i class="fas fa-key fa-3x mb-3"></i>
+                            <h5>Password Security</h5>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-secondary me-2">Privacy Tips</span>
+                            <small class="text-muted">May 5, 2023</small>
+                        </div>
+                        <h3 class="card-title h5 mb-3">Why You Should Be Using a Password Manager</h3>
+                        <p class="card-text">Password managers are essential tools for maintaining strong, unique passwords across all your accounts. Learn why they're crucial for your online security.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article 3 -->
+            <div class="col-md-6 col-lg-4 blog-post" data-category="security">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="blog-post-image bg-gradient-red text-white d-flex align-items-center justify-content-center p-4" style="height: 200px;">
+                        <div class="text-center">
+                            <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                            <h5>Security Alert</h5>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-secondary me-2">Security News</span>
+                            <small class="text-muted">April 28, 2023</small>
+                        </div>
+                        <h3 class="card-title h5 mb-3">Recent Data Breaches and How to Protect Yourself</h3>
+                        <p class="card-text">Several major companies have experienced data breaches in recent months. Here's what you need to know and how to check if your data was compromised.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article 4 -->
+            <div class="col-md-6 col-lg-4 blog-post" data-category="guides">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="blog-post-image bg-gradient-purple text-white d-flex align-items-center justify-content-center p-4" style="height: 200px;">
+                        <div class="text-center">
+                            <i class="fas fa-cogs fa-3x mb-3"></i>
+                            <h5>Browser Settings</h5>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-secondary me-2">How-to Guides</span>
+                            <small class="text-muted">April 20, 2023</small>
+                        </div>
+                        <h3 class="card-title h5 mb-3">Optimizing Your Browser Settings for Privacy</h3>
+                        <p class="card-text">Most browsers have built-in privacy settings that are often overlooked. Learn how to configure your browser for enhanced privacy protection.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article 5 -->
+            <div class="col-md-6 col-lg-4 blog-post" data-category="privacy-tips">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="blog-post-image bg-gradient-orange text-white d-flex align-items-center justify-content-center p-4" style="height: 200px;">
+                        <div class="text-center">
+                            <i class="fas fa-users fa-3x mb-3"></i>
+                            <h5>Social Media</h5>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-secondary me-2">Privacy Tips</span>
+                            <small class="text-muted">April 15, 2023</small>
+                        </div>
+                        <h3 class="card-title h5 mb-3">Securing Your Social Media Accounts</h3>
+                        <p class="card-text">Social media platforms collect vast amounts of data. Discover how to minimize your digital footprint while still enjoying social media.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Article 6 -->
+            <div class="col-md-6 col-lg-4 blog-post" data-category="updates">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="blog-post-image bg-gradient-teal text-white d-flex align-items-center justify-content-center p-4" style="height: 200px;">
+                        <div class="text-center">
+                            <i class="fas fa-mobile-alt fa-3x mb-3"></i>
+                            <h5>Mobile App</h5>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-secondary me-2">Product Updates</span>
+                            <small class="text-muted">April 8, 2023</small>
+                        </div>
+                        <h3 class="card-title h5 mb-3">Coming Soon: DataShield Mobile App</h3>
+                        <p class="card-text">We're excited to announce that we're developing a DataShield mobile app to bring our privacy protection to your smartphones and tablets.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 pt-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- No Results Message -->
+        <div id="no-results" class="text-center py-5 d-none">
+            <i class="fas fa-search fa-3x text-muted mb-3"></i>
+            <h3>No articles found</h3>
+            <p class="text-muted">Try adjusting your search or filter criteria</p>
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="text-center mt-5">
+            <button id="load-more" class="btn btn-outline-primary btn-lg">Load More Articles</button>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Signup -->
+<section class="py-5 bg-light mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Subscribe to Our Newsletter</h2>
+                <p class="lead mb-4">Get the latest privacy tips and DataShield updates delivered to your inbox.</p>
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <form class="d-flex">
+                            <input type="email" class="form-control me-2" placeholder="Your email address">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                        <small class="text-muted mt-2">We respect your privacy and will never share your email address.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Blog Functionality -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Elements
+        const blogPosts = document.querySelectorAll('.blog-post');
+        const searchInput = document.getElementById('blog-search');
+        const searchButton = document.getElementById('search-button');
+        const categoryFilter = document.getElementById('category-filter');
+        const noResults = document.getElementById('no-results');
+        const loadMoreButton = document.getElementById('load-more');
+        
+        // Initial state
+        let visiblePosts = 6;
+        const postsPerLoad = 3;
+        
+        // Function to filter posts
+        function filterPosts() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const category = categoryFilter.value;
+            let matchCount = 0;
+            
+            blogPosts.forEach((post, index) => {
+                const postCategory = post.getAttribute('data-category');
+                const postContent = post.textContent.toLowerCase();
+                const categoryMatch = category === 'all' || postCategory === category;
+                const searchMatch = searchTerm === '' || postContent.includes(searchTerm);
+                
+                if (categoryMatch && searchMatch) {
+                    matchCount++;
+                    if (matchCount <= visiblePosts) {
+                        post.style.display = 'block';
+                    } else {
+                        post.style.display = 'none';
+                    }
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            if (matchCount === 0) {
+                noResults.classList.remove('d-none');
+            } else {
+                noResults.classList.add('d-none');
+            }
+            
+            // Show/hide load more button
+            if (matchCount <= visiblePosts) {
+                loadMoreButton.style.display = 'none';
+            } else {
+                loadMoreButton.style.display = 'inline-block';
+            }
+        }
+        
+        // Event listeners
+        searchButton.addEventListener('click', function() {
+            visiblePosts = 6; // Reset visible posts when searching
+            filterPosts();
+        });
+        
+        searchInput.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                visiblePosts = 6; // Reset visible posts when searching
+                filterPosts();
+            }
+        });
+        
+        categoryFilter.addEventListener('change', function() {
+            visiblePosts = 6; // Reset visible posts when changing category
+            filterPosts();
+        });
+        
+        loadMoreButton.addEventListener('click', function() {
+            visiblePosts += postsPerLoad;
+            filterPosts();
+        });
+        
+        // Initialize
+        filterPosts();
+        
+        // Animate posts on scroll
+        const animatePosts = function() {
+            blogPosts.forEach(post => {
+                const postPosition = post.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (postPosition < screenPosition) {
+                    post.style.opacity = 1;
+                    post.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial styles for animation
+        blogPosts.forEach(post => {
+            post.style.opacity = 0;
+            post.style.transform = 'translateY(20px)';
+            post.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        // Run animation on load and scroll
+        window.addEventListener('scroll', animatePosts);
+        animatePosts(); // Run once on page load
+    });
+</script>
+
+<style>
+/* Gradient Backgrounds for Blog Post Images */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #4a6cf7 0%, #1d3ee7 100%);
+}
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+}
+.bg-gradient-green {
+    background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+}
+.bg-gradient-red {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+}
+.bg-gradient-purple {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+}
+.bg-gradient-orange {
+    background: linear-gradient(135deg, #f97316 0%, #c2410c 100%);
+}
+.bg-gradient-teal {
+    background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%);
+}
+
+/* Team Avatar for Blog Authors */
+.team-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #4a6cf7;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.team-avatar-sm {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+}
+
+/* ASCII Art Container */
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+    line-height: 1;
+}
+</style>
+
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="logo-text">DataShield</span>
+                    </div>
+                    <p class="text-muted">Protecting your online privacy with advanced tracking prevention and cookie management.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                        <li class="mb-2"><a href="features.html" class="text-decoration-none text-muted">Features</a></li>
+                        <li class="mb-2"><a href="privacy_score.html" class="text-decoration-none text-muted">Privacy Score</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-decoration-none text-muted">Blog</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-muted">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Connect With Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-decoration-none text-muted fs-5"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-decoration-none text-muted fs-5"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-decoration-none text-muted fs-5"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-decoration-none text-muted fs-5"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-4 mt-4">
+                <p class="text-center text-muted mb-0">&copy; 2023 DataShield. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="static/js/script.js"></script>
+</body>
+</html> 

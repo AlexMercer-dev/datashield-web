@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataShield - Privacy-Focused Browser Extension</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <span class="logo-text">DataShield</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="features.html">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="privacy_score.html">Privacy Score</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary ms-2" href="download.html">Download</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+<!-- Hero Section -->
+<section class="hero-section py-5 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h1 class="display-4 fw-bold mb-4 text-white">Take Control of Your Online Privacy</h1>
+                <p class="lead mb-4 text-white opacity-75">DataShield is a powerful browser extension that blocks trackers, manages cookies, and enhances your browsing privacy.</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="download.html" class="btn btn-light btn-lg">Download Now</a>
+                    <a href="features.html" class="btn btn-outline-light btn-lg">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="dashboard-mockup">
+                    <div class="dashboard-header">
+                        <span class="fw-bold">DataShield Dashboard</span>
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="dashboard-widget">
+                            <div class="widget-title">Trackers Blocked</div>
+                            <div class="widget-content">
+                                <div class="widget-chart"></div>
+                                <div class="widget-stats">1,248</div>
+                            </div>
+                        </div>
+                        <div class="dashboard-widget">
+                            <div class="widget-title">Privacy Score</div>
+                            <div class="widget-content">
+                                <div class="widget-chart"></div>
+                                <div class="widget-stats">87/100</div>
+                            </div>
+                        </div>
+                        <div class="dashboard-widget">
+                            <div class="widget-title">Cookies Managed</div>
+                            <div class="widget-content">
+                                <div class="widget-chart"></div>
+                                <div class="widget-stats">523</div>
+                            </div>
+                        </div>
+                        <div class="dashboard-widget">
+                            <div class="widget-title">Secure Browsing</div>
+                            <div class="widget-content">
+                                <div class="widget-chart"></div>
+                                <div class="widget-stats">Active</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Overview -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose DataShield?</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Block Trackers</h3>
+                    <p class="text-muted">Stop websites from tracking your online behavior and collecting your personal data.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Cookie Management</h3>
+                    <p class="text-muted">Take control of which cookies are stored and for how long.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Privacy Reports</h3>
+                    <p class="text-muted">Get detailed insights about your privacy status and potential vulnerabilities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Privacy Score Preview -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="mb-4">Know Your Privacy Score</h2>
+                <p class="lead mb-4">DataShield analyzes your browsing habits and security settings to generate a personalized privacy score, helping you identify areas for improvement.</p>
+                <a href="privacy_score.html" class="btn btn-primary">Learn About Privacy Scores</a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="privacy-meter">
+                    <div class="privacy-meter-fill"></div>
+                    <div class="privacy-meter-label">87%</div>
+                </div>
+                <div class="mt-4">
+                    <span class="badge bg-success p-2 me-2">Tracking Protection: Strong</span>
+                    <span class="badge bg-warning p-2 me-2">Cookie Management: Good</span>
+                    <span class="badge bg-info p-2">Ad Blocking: Excellent</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Users Say</h2>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-5">
+                                    <p class="lead mb-4">"DataShield has completely changed how I browse the web. I feel much more secure knowing my data is protected."</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="team-avatar me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">SJ</div>
+                                        <div>
+                                            <h5 class="mb-1">Sarah Johnson</h5>
+                                            <p class="text-muted mb-0">Web Developer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-5">
+                                    <p class="lead mb-4">"The privacy reports are incredibly detailed and have helped me understand which websites to avoid."</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="team-avatar me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">MC</div>
+                                        <div>
+                                            <h5 class="mb-1">Michael Chen</h5>
+                                            <p class="text-muted mb-0">IT Specialist</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Protect Your Privacy?</h2>
+        <p class="lead mb-4">Join thousands of users who have already enhanced their online privacy with DataShield.</p>
+        <a href="download.html" class="btn btn-light btn-lg">Download DataShield Now</a>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="logo-text">DataShield</span>
+                    </div>
+                    <p class="text-muted">Protecting your online privacy with advanced tracking prevention and cookie management.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                        <li class="mb-2"><a href="features.html" class="text-decoration-none text-muted">Features</a></li>
+                        <li class="mb-2"><a href="privacy_score.html" class="text-decoration-none text-muted">Privacy Score</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-decoration-none text-muted">Blog</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-muted">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Connect With Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-decoration-none text-muted fs-5"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-decoration-none text-muted fs-5"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-decoration-none text-muted fs-5"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-decoration-none text-muted fs-5"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-4 mt-4">
+                <p class="text-center text-muted mb-0">&copy; 2023 DataShield. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="static/js/script.js"></script>
+</body>
+</html> 
