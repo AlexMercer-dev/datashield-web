@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Score - DataShield</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <span class="logo-text">DataShield</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="features.html">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="privacy_score.html">Privacy Score</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary ms-2" href="download.html">Download</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+<section class="hero-section page-header">
+    <div class="container py-5 text-center text-white">
+        <h1 class="display-4 fw-bold mb-3">Understanding Your Privacy Score</h1>
+        <p class="lead mb-0">How DataShield helps you measure and improve your online privacy</p>
+    </div>
+</section>
+
+<section class="privacy-score-explanation py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-4">What is a Privacy Score?</h2>
+                <p class="lead mb-5">Your Privacy Score is a numerical representation of how well your online activities are protected from tracking and data collection. DataShield calculates this score based on multiple factors, giving you a clear picture of your privacy status.</p>
+                
+                <div class="privacy-meter mx-auto mb-5" style="width: 300px; height: 150px;">
+                    <div class="privacy-meter-fill"></div>
+                    <div class="privacy-meter-label">87%</div>
+                </div>
+                
+                <p class="mb-4">The score ranges from 0 to 100:</p>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="p-3 bg-danger bg-opacity-25 rounded h-100">
+                            <h4 class="h5 text-danger">0-40: Poor</h4>
+                            <p class="small mb-0">Your data is likely being collected by multiple trackers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="p-3 bg-warning bg-opacity-25 rounded h-100">
+                            <h4 class="h5 text-warning">41-70: Fair</h4>
+                            <p class="small mb-0">Some measures in place, but significant room for improvement</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="p-3 bg-success bg-opacity-25 rounded h-100">
+                            <h4 class="h5 text-success">71-90: Good</h4>
+                            <p class="small mb-0">Most tracking attempts are being blocked</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="p-3 bg-primary bg-opacity-25 rounded h-100">
+                            <h4 class="h5 text-primary">91-100: Excellent</h4>
+                            <p class="small mb-0">Your browsing is highly secure and private</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="score-factors py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">How Your Score is Calculated</h2>
+        <p class="text-center lead mb-5">DataShield evaluates several key factors to determine your overall Privacy Score:</p>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3 class="h4 mb-3 text-center">Tracker Blocking</h3>
+                    <p class="text-muted mb-4">Measures how effectively you're blocking tracking scripts, pixels, and beacons across websites.</p>
+                    <div class="bg-light rounded p-2 text-center">
+                        <strong>Weight: 35%</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                    <h3 class="h4 mb-3 text-center">Cookie Management</h3>
+                    <p class="text-muted mb-4">Evaluates your cookie settings and how well you're controlling persistent and third-party cookies.</p>
+                    <div class="bg-light rounded p-2 text-center">
+                        <strong>Weight: 25%</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h3 class="h4 mb-3 text-center">Fingerprinting Protection</h3>
+                    <p class="text-muted mb-4">Assesses your resistance to browser fingerprinting techniques that can identify you across websites.</p>
+                    <div class="bg-light rounded p-2 text-center">
+                        <strong>Weight: 20%</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-6">
+                <div class="feature-card h-100">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="h4 mb-3 text-center">Browsing Habits</h3>
+                    <p class="text-muted mb-4">Analyzes the privacy practices of the websites you visit most frequently.</p>
+                    <div class="bg-light rounded p-2 text-center">
+                        <strong>Weight: 15%</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-6">
+                <div class="feature-card h-100">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3 class="h4 mb-3 text-center">Browser Settings</h3>
+                    <p class="text-muted mb-4">Reviews your browser's privacy settings and configurations.</p>
+                    <div class="bg-light rounded p-2 text-center">
+                        <strong>Weight: 5%</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="score-dashboard py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Your Privacy Dashboard</h2>
+        <p class="lead text-center mb-5">DataShield provides a comprehensive dashboard to help you understand and improve your Privacy Score:</p>
+        
+        <div class="dashboard-mockup mx-auto" style="max-width: 800px;">
+            <div class="dashboard-header">
+                <span>Privacy Dashboard</span>
+                <div>
+                    <i class="fas fa-cog me-2"></i>
+                    <i class="fas fa-expand"></i>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title h5 mb-3">Privacy Score Trend</h4>
+                                <div style="height: 160px; background: linear-gradient(to right, #f8f9fa 0%, #f8f9fa 100%); position: relative;">
+                                    <!-- CSS-based chart -->
+                                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;">
+                                        <div style="position: absolute; bottom: 50px; left: 0%; width: 10%; height: 2px; background-color: #4a6cf7;"></div>
+                                        <div style="position: absolute; bottom: 55px; left: 10%; width: 10%; height: 2px; background-color: #4a6cf7;"></div>
+                                        <div style="position: absolute; bottom: 60px; left: 20%; width: 10%; height: 2px; background-color: #4a6cf7;"></div>
+                                        <div style="position: absolute; bottom: 65px; left: 30%; width: 10%; height: 2px; background-color: #4a6cf7;"></div>
+                                        <div style="position: absolute; bottom: 75px; left: 40%; width: 10%; height: 2px; background-color: #4a6cf7;"></div>
+                                        <div style="position: absolute; bottom: 80px; left: 50%; width: 10%; height: 2px; background-color: #4a6cf7;"></div>
+                                        <div style="position: absolute; bottom: 95px; left: 60%; width: 10%; height: 2px; background-color: #4a6cf7;"></div>
+                                        <div style="position: absolute; bottom: 100px; left: 70%; width: 10%; height: 2px; background-color: #4a6cf7;"></div>
+                                        <div style="position: absolute; bottom: 110px; left: 80%; width: 10%; height: 2px; background-color: #4a6cf7;"></div>
+                                        <div style="position: absolute; bottom: 120px; left: 90%; width: 10%; height: 2px; background-color: #4a6cf7;"></div>
+                                        
+                                        <div style="position: absolute; bottom: 50px; left: 0%; width: 5px; height: 5px; background-color: #4a6cf7; border-radius: 50%;"></div>
+                                        <div style="position: absolute; bottom: 55px; left: 10%; width: 5px; height: 5px; background-color: #4a6cf7; border-radius: 50%;"></div>
+                                        <div style="position: absolute; bottom: 60px; left: 20%; width: 5px; height: 5px; background-color: #4a6cf7; border-radius: 50%;"></div>
+                                        <div style="position: absolute; bottom: 65px; left: 30%; width: 5px; height: 5px; background-color: #4a6cf7; border-radius: 50%;"></div>
+                                        <div style="position: absolute; bottom: 75px; left: 40%; width: 5px; height: 5px; background-color: #4a6cf7; border-radius: 50%;"></div>
+                                        <div style="position: absolute; bottom: 80px; left: 50%; width: 5px; height: 5px; background-color: #4a6cf7; border-radius: 50%;"></div>
+                                        <div style="position: absolute; bottom: 95px; left: 60%; width: 5px; height: 5px; background-color: #4a6cf7; border-radius: 50%;"></div>
+                                        <div style="position: absolute; bottom: 100px; left: 70%; width: 5px; height: 5px; background-color: #4a6cf7; border-radius: 50%;"></div>
+                                        <div style="position: absolute; bottom: 110px; left: 80%; width: 5px; height: 5px; background-color: #4a6cf7; border-radius: 50%;"></div>
+                                        <div style="position: absolute; bottom: 120px; left: 90%; width: 8px; height: 8px; background-color: #4a6cf7; border-radius: 50%;"></div>
+                                    </div>
+                                    
+                                    <!-- Axis labels -->
+                                    <div class="text-muted small" style="position: absolute; bottom: 0; left: 0%;">Jan</div>
+                                    <div class="text-muted small" style="position: absolute; bottom: 0; left: 40%;">Jun</div>
+                                    <div class="text-muted small" style="position: absolute; bottom: 0; right: 0;">Dec</div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <span class="badge bg-success p-2">+23% improvement this year</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title h5 mb-3">Protection Categories</h4>
+                                <div>
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span>Tracker Blocking</span>
+                                            <span>92%</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 92%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span>Cookie Management</span>
+                                            <span>78%</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 78%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span>Fingerprinting Protection</span>
+                                            <span>90%</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span>Browsing Habits</span>
+                                            <span>85%</span>
+                                        </div>
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title h5 mb-3">Dashboard Features</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="border p-3 rounded text-center h-100">
+                                            <i class="fas fa-chart-line text-primary mb-3 fa-2x"></i>
+                                            <h5 class="h6">Real-time Monitoring</h5>
+                                            <p class="small text-muted mb-0">See tracking attempts as they happen</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="border p-3 rounded text-center h-100">
+                                            <i class="fas fa-history text-primary mb-3 fa-2x"></i>
+                                            <h5 class="h6">Historical Trends</h5>
+                                            <p class="small text-muted mb-0">Track privacy score improvements</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="border p-3 rounded text-center h-100">
+                                            <i class="fas fa-globe text-primary mb-3 fa-2x"></i>
+                                            <h5 class="h6">Site Analysis</h5>
+                                            <p class="small text-muted mb-0">Identify high-risk websites</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3">
+                                        <div class="border p-3 rounded text-center h-100">
+                                            <i class="fas fa-lightbulb text-primary mb-3 fa-2x"></i>
+                                            <h5 class="h6">Recommendations</h5>
+                                            <p class="small text-muted mb-0">Get personalized improvement tips</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="improvement-tips py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Tips to Improve Your Privacy Score</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px; flex-shrink: 0;">1</div>
+                        <h3 class="h5 mb-0">Enable Maximum Protection Mode</h3>
+                    </div>
+                    <p class="text-muted">Switch DataShield to its highest protection level for comprehensive tracking prevention.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px; flex-shrink: 0;">2</div>
+                        <h3 class="h5 mb-0">Regularly Clear Cookies</h3>
+                    </div>
+                    <p class="text-muted">Set DataShield to automatically clear cookies when you close your browser.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px; flex-shrink: 0;">3</div>
+                        <h3 class="h5 mb-0">Use Privacy-Focused Search Engines</h3>
+                    </div>
+                    <p class="text-muted">Switch to search engines that don't track your search history.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-6">
+                <div class="feature-card h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px; flex-shrink: 0;">4</div>
+                        <h3 class="h5 mb-0">Review Site Permissions</h3>
+                    </div>
+                    <p class="text-muted">Regularly check and update which sites have permission to use cookies and trackers.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-6">
+                <div class="feature-card h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px; flex-shrink: 0;">5</div>
+                        <h3 class="h5 mb-0">Enable Anti-Fingerprinting</h3>
+                    </div>
+                    <p class="text-muted">Use DataShield's advanced features to prevent browser fingerprinting.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Check Your Privacy Score?</h2>
+        <p class="lead mb-4">Download DataShield now and discover how well your online privacy is protected.</p>
+        <a href="download.html" class="btn btn-light btn-lg">Download DataShield</a>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="logo-text">DataShield</span>
+                    </div>
+                    <p class="text-muted">Protecting your online privacy with advanced tracking prevention and cookie management.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                        <li class="mb-2"><a href="features.html" class="text-decoration-none text-muted">Features</a></li>
+                        <li class="mb-2"><a href="privacy_score.html" class="text-decoration-none text-muted">Privacy Score</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-decoration-none text-muted">Blog</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-muted">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Connect With Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-decoration-none text-muted fs-5"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-decoration-none text-muted fs-5"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-decoration-none text-muted fs-5"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-decoration-none text-muted fs-5"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-4 mt-4">
+                <p class="text-center text-muted mb-0">&copy; 2023 DataShield. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="static/js/script.js"></script>
+</body>
+</html> 

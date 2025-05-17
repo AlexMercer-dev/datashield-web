@@ -1,0 +1,587 @@
+/* Custom styles to complement Bootstrap */
+
+/* Add padding to account for fixed navbar */
+body {
+    padding-top: 76px;
+}
+
+/* Custom primary color */
+.btn-primary, 
+.bg-primary {
+    background-color: #4a6cf7 !important;
+    border-color: #4a6cf7 !important;
+}
+
+.text-primary {
+    color: #4a6cf7 !important;
+}
+
+.btn-outline-primary {
+    color: #4a6cf7 !important;
+    border-color: #4a6cf7 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #4a6cf7 !important;
+    color: white !important;
+}
+
+/* Logo Text Styling */
+.logo-text {
+    font-family: 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #4a6cf7;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 30px;
+}
+
+.logo-text:before {
+    content: '🛡️';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+/* Hero section with CSS gradient background instead of image */
+.hero-section {
+    background: linear-gradient(135deg, #4a6cf7 0%, #2a3b8f 100%);
+    color: white;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    transform: translate(30%, -30%);
+}
+
+/* CSS Shield icon */
+.shield-icon {
+    width: 100px;
+    height: 120px;
+    background: linear-gradient(135deg, #4a6cf7 0%, #2a3b8f 100%);
+    position: relative;
+    display: inline-block;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin-bottom: 20px;
+}
+
+.shield-icon:after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Feature card with CSS */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4a6cf7 0%, #2a3b8f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.2);
+}
+
+/* Privacy score meter using CSS */
+.privacy-meter {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: 30px auto;
+    background-color: #f5f5f5;
+    border-radius: 100px 100px 0 0;
+    overflow: hidden;
+}
+
+.privacy-meter-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: linear-gradient(to top, #4a6cf7, #2a3b8f);
+    border-radius: 0 0 100px 100px;
+    transition: height 1s ease;
+}
+
+.privacy-meter-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Dashboard mockup using CSS */
+.dashboard-mockup {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background: white;
+    margin: 40px auto;
+}
+
+.dashboard-header {
+    background: #4a6cf7;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.dashboard-widget {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    height: 150px;
+    position: relative;
+}
+
+.widget-title {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.widget-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
+}
+
+.widget-chart {
+    flex-grow: 1;
+    background: linear-gradient(90deg, #4a6cf7 70%, #f8f9fa 70%);
+    border-radius: 4px;
+}
+
+.widget-stats {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Custom styling for testimonial carousel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #4a6cf7;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: -20px;
+}
+
+.carousel-control-next {
+    right: -20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* ASCII art styling */
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+    line-height: 1.2;
+    text-align: center;
+    color: #4a6cf7;
+    margin: 20px auto;
+}
+
+/* Timeline styling for About page */
+.timeline {
+    position: relative;
+    padding-left: 50px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e9ecef;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-date {
+    position: absolute;
+    left: -50px;
+    width: 40px;
+    height: 40px;
+    background-color: #4a6cf7;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Accordion styling for FAQ */
+.accordion-button:not(.collapsed) {
+    background-color: #eef2ff;
+    color: #4a6cf7;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(74, 108, 247, 0.25);
+}
+
+/* Team member boxes instead of photos */
+.team-member {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    background: linear-gradient(135deg, #4a6cf7 0%, #2a3b8f 100%);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.team-info h4 {
+    margin-bottom: 5px;
+    color: #343a40;
+}
+
+.team-info p {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Download buttons with CSS instead of app store images */
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    background: #343a40;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.download-button:hover {
+    background: #212529;
+    color: white;
+    text-decoration: none;
+}
+
+.download-button i {
+    font-size: 1.8rem;
+    margin-right: 10px;
+}
+
+.download-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.download-small {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.download-big {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Continuing from previous CSS */
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.contact-method {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    color: #4a6cf7;
+    margin-bottom: 20px;
+}
+
+.contact-method h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.contact-method p {
+    color: #6c757d;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo .logo-text {
+    color: white;
+}
+
+.footer-links h3,
+.footer-social h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links ul li a:hover {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #4a6cf7;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero .container,
+    .privacy-score-preview .container,
+    .feature-row,
+    .about-mission .container {
+        flex-direction: column;
+    }
+    
+    .hero-content,
+    .privacy-score-content,
+    .feature-content,
+    .mission-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .feature-row.reverse {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin-bottom: 20px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 15px 10px;
+    }
+    
+    .hero-content h1,
+    .privacy-score-content h2,
+    .feature-content h2,
+    .page-header h1,
+    .features-overview h2,
+    .testimonials h2,
+    .cta h2,
+    .mission-content h2,
+    .about-story h2,
+    .team-section h2,
+    .values-section h2,
+    .press-section h2,
+    .contact-section h2,
+    .privacy-score-explanation h2,
+    .score-factors h2,
+    .score-dashboard h2,
+    .improvement-tips h2,
+    .installation-guide h2,
+    .system-requirements h2,
+    .faq h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-card,
+    .testimonial,
+    .browser-option,
+    .factor-card,
+    .team-member,
+    .value-card,
+    .contact-method {
+        padding: 20px;
+    }
+    
+    .feature-icon,
+    .factor-icon,
+    .value-icon,
+    .contact-icon {
+        font-size: 2rem;
+    }
+    
+    .feature-card h3,
+    .factor-card h3,
+    .value-card h3,
+    .contact-method h3,
+    .browser-option h3 {
+        font-size: 1.3rem;
+    }
+    
+    .timeline:before {
+        left: 15px;
+    }
+    
+    .timeline-date {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    
+    .timeline-item {
+        padding-left: 45px;
+    }
+} 
