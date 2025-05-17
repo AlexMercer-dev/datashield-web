@@ -3,78 +3,261 @@
 {% block title %}Features - DataShield{% endblock %}
 
 {% block content %}
-<!-- Page Header -->
-<section class="py-5 bg-light mt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h1 class="fw-bold mb-3">DataShield Features</h1>
-                <p class="lead text-muted">Discover how DataShield protects your privacy online</p>
-            </div>
-        </div>
+<section class="hero-section page-header">
+    <div class="container py-5 text-center text-white">
+        <h1 class="display-4 fw-bold mb-3">DataShield Features</h1>
+        <p class="lead mb-0">Discover how DataShield protects your privacy online</p>
     </div>
 </section>
 
-<!-- Feature Detail -->
-<section class="py-5">
+<section class="feature-detail py-5">
     <div class="container">
-        <div class="row align-items-center mb-5">
+        <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <h2 class="mb-4">Advanced Tracker Blocking</h2>
-                <p class="mb-4">DataShield uses sophisticated algorithms to identify and block tracking scripts from advertisers, social media platforms, and data brokers.</p>
-                <ul class="list-unstyled">
+                <p class="lead mb-4">DataShield uses sophisticated algorithms to identify and block tracking scripts from advertisers, social media platforms, and data brokers.</p>
+                <ul class="list-unstyled mb-0">
                     <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Blocks third-party trackers automatically</li>
                     <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Prevents fingerprinting techniques</li>
                     <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Stops invisible pixels and beacons</li>
                     <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Customizable blocking levels</li>
                 </ul>
             </div>
-            <div class="col-lg-6">
-                <img src="{{ url_for('static', filename='images/tracker-blocking.png') }}" alt="Tracker Blocking" class="img-fluid rounded shadow">
-            </div>
-        </div>
-        
-        <div class="row align-items-center mb-5 flex-lg-row-reverse">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="mb-4">Intelligent Cookie Management</h2>
-                <p class="mb-4">Take control of how websites use cookies to track your activity and store information about your browsing habits.</p>
-                <ul class="list-unstyled">
-                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Auto-delete cookies when you close your browser</li>
-                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Whitelist cookies from trusted websites</li>
-                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Block third-party cookies</li>
-                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Set custom expiration dates</li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <img src="{{ url_for('static', filename='images/cookie-management.png') }}" alt="Cookie Management" class="img-fluid rounded shadow">
-            </div>
-        </div>
-        
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="mb-4">Comprehensive Privacy Reports</h2>
-                <p class="mb-4">Get detailed insights into your online privacy status with easy-to-understand reports and recommendations.</p>
-                <ul class="list-unstyled">
-                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Track blocked elements in real-time</li>
-                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> View privacy score for each website</li>
-                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Receive personalized recommendations</li>
-                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Export reports for analysis</li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <img src="{{ url_for('static', filename='images/privacy-reports.png') }}" alt="Privacy Reports" class="img-fluid rounded shadow">
+            <div class="col-lg-6 text-center">
+                <div class="dashboard-mockup">
+                    <div class="dashboard-header">
+                        <span>Tracker Blocking Dashboard</span>
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="p-4">
+                        <div class="shield-icon mx-auto"></div>
+                        <div class="mt-4">
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Trackers Blocked Today</span>
+                                    <span class="fw-bold">147</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Social Media Trackers</span>
+                                    <span class="fw-bold">48</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Advertising Networks</span>
+                                    <span class="fw-bold">99</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 78%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Feature Comparison -->
-<section class="py-5 bg-light">
+<section class="feature-detail py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center flex-lg-row-reverse">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="mb-4">Intelligent Cookie Management</h2>
+                <p class="lead mb-4">Take control of how websites use cookies to track your activity and store information about you.</p>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Auto-delete cookies when you close your browser</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Whitelist essential cookies for your favorite sites</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Block third-party cookies by default</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Detailed cookie information and management</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="dashboard-mockup">
+                    <div class="dashboard-header">
+                        <span>Cookie Management</span>
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <div class="p-4">
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <div class="border p-3 rounded shadow-sm">
+                                    <i class="fas fa-cookie text-primary fa-2x mb-3"></i>
+                                    <h5>First-Party</h5>
+                                    <p class="mb-0"><span class="badge bg-warning">24 Allowed</span></p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="border p-3 rounded shadow-sm">
+                                    <i class="fas fa-cookie-bite text-danger fa-2x mb-3"></i>
+                                    <h5>Third-Party</h5>
+                                    <p class="mb-0"><span class="badge bg-danger">138 Blocked</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-start">
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" checked>
+                                <label class="form-check-label">Auto-clear cookies on exit</label>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" checked>
+                                <label class="form-check-label">Block third-party cookies</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">Block all cookies (may break sites)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feature-detail py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="mb-4">Comprehensive Privacy Reports</h2>
+                <p class="lead mb-4">Get detailed insights about your online privacy status and potential vulnerabilities.</p>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Real-time tracking attempts dashboard</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Weekly privacy summary reports</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Site-specific privacy analysis</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Personalized recommendations for improvement</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="dashboard-mockup">
+                    <div class="dashboard-header">
+                        <span>Privacy Reports</span>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="p-4">
+                        <div class="row g-3 text-start">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold">Weekly Summary</span>
+                                    <span class="badge bg-success">Improved</span>
+                                </div>
+                                <div class="border p-3 rounded">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small>Trackers Blocked</small>
+                                        <small>1,247 (+12%)</small>
+                                    </div>
+                                    <div class="progress mb-3" style="height: 5px;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small>Cookies Managed</small>
+                                        <small>523 (+5%)</small>
+                                    </div>
+                                    <div class="progress mb-3" style="height: 5px;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 65%"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small>Privacy Score</small>
+                                        <small>87/100 (+3)</small>
+                                    </div>
+                                    <div class="progress" style="height: 5px;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 87%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold">High-Risk Sites</span>
+                                    <span class="badge bg-warning">3 detected</span>
+                                </div>
+                                <div class="border p-3 rounded">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><small><i class="fas fa-exclamation-triangle text-warning me-1"></i> example-social.com (23 trackers)</small></li>
+                                        <li class="mb-2"><small><i class="fas fa-exclamation-triangle text-warning me-1"></i> ad-analytics.net (17 trackers)</small></li>
+                                        <li><small><i class="fas fa-exclamation-triangle text-warning me-1"></i> marketing-tracker.io (15 trackers)</small></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feature-detail py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center flex-lg-row-reverse">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="mb-4">Privacy Score</h2>
+                <p class="lead mb-4">DataShield analyzes your browsing habits and security settings to generate a personalized privacy score.</p>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Overall privacy rating from 0-100</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Breakdown by category (tracking, cookies, etc.)</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Historical trends to track improvement</li>
+                    <li class="mb-3"><i class="fas fa-check text-primary me-2"></i> Benchmarking against average users</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="dashboard-mockup">
+                    <div class="dashboard-header">
+                        <span>Privacy Score</span>
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="p-4">
+                        <div class="privacy-meter mx-auto mb-4">
+                            <div class="privacy-meter-fill"></div>
+                            <div class="privacy-meter-label">87%</div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="border p-2 rounded">
+                                    <small class="text-muted d-block">Tracking Protection</small>
+                                    <span class="badge bg-success p-2">92%</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="border p-2 rounded">
+                                    <small class="text-muted d-block">Cookie Management</small>
+                                    <span class="badge bg-warning p-2">78%</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="border p-2 rounded">
+                                    <small class="text-muted d-block">Fingerprinting</small>
+                                    <span class="badge bg-success p-2">90%</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="border p-2 rounded">
+                                    <small class="text-muted d-block">Browsing Habits</small>
+                                    <span class="badge bg-info p-2">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feature-comparison py-5">
     <div class="container">
         <h2 class="text-center mb-5">How DataShield Compares</h2>
         <div class="table-responsive">
-            <table class="table table-bordered bg-white">
-                <thead class="bg-primary text-white">
+            <table class="table table-bordered">
+                <thead class="table-primary">
                     <tr>
                         <th>Feature</th>
                         <th>DataShield</th>
@@ -85,33 +268,33 @@
                 <tbody>
                     <tr>
                         <td>Tracker Blocking</td>
-                        <td><i class="fas fa-check text-success"></i> Advanced</td>
-                        <td><i class="fas fa-check text-success"></i> Basic</td>
-                        <td><i class="fas fa-check text-success"></i> Varies</td>
+                        <td><i class="fas fa-check-circle text-success"></i> Advanced</td>
+                        <td><i class="fas fa-check-circle text-success"></i> Basic</td>
+                        <td><i class="fas fa-check-circle text-success"></i> Varies</td>
                     </tr>
                     <tr>
                         <td>Cookie Management</td>
-                        <td><i class="fas fa-check text-success"></i> Comprehensive</td>
-                        <td><i class="fas fa-times text-danger"></i> No</td>
-                        <td><i class="fas fa-check text-success"></i> Basic</td>
+                        <td><i class="fas fa-check-circle text-success"></i> Comprehensive</td>
+                        <td><i class="fas fa-times-circle text-danger"></i> No</td>
+                        <td><i class="fas fa-check-circle text-success"></i> Basic</td>
                     </tr>
                     <tr>
                         <td>Privacy Reports</td>
-                        <td><i class="fas fa-check text-success"></i> Detailed</td>
-                        <td><i class="fas fa-times text-danger"></i> No</td>
-                        <td><i class="fas fa-check text-success"></i> Limited</td>
+                        <td><i class="fas fa-check-circle text-success"></i> Detailed</td>
+                        <td><i class="fas fa-times-circle text-danger"></i> No</td>
+                        <td><i class="fas fa-check-circle text-success"></i> Limited</td>
                     </tr>
                     <tr>
                         <td>Privacy Score</td>
-                        <td><i class="fas fa-check text-success"></i> Yes</td>
-                        <td><i class="fas fa-times text-danger"></i> No</td>
-                        <td><i class="fas fa-times text-danger"></i> Rarely</td>
+                        <td><i class="fas fa-check-circle text-success"></i> Yes</td>
+                        <td><i class="fas fa-times-circle text-danger"></i> No</td>
+                        <td><i class="fas fa-times-circle text-danger"></i> Rarely</td>
                     </tr>
                     <tr>
                         <td>Performance Impact</td>
-                        <td><i class="fas fa-check text-success"></i> Minimal</td>
-                        <td><i class="fas fa-check text-success"></i> Minimal</td>
-                        <td><i class="fas fa-times text-danger"></i> Often High</td>
+                        <td><i class="fas fa-check-circle text-success"></i> Minimal</td>
+                        <td><i class="fas fa-check-circle text-success"></i> Minimal</td>
+                        <td><i class="fas fa-times-circle text-danger"></i> Often High</td>
                     </tr>
                 </tbody>
             </table>
@@ -119,7 +302,6 @@
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="py-5 bg-primary text-white">
     <div class="container text-center">
         <h2 class="mb-4">Ready to Experience These Features?</h2>

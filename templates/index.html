@@ -2,19 +2,54 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="py-5 mt-5">
+<section class="hero-section py-5 mt-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-5 mb-lg-0">
-                <h1 class="display-4 fw-bold mb-4">Take Control of Your Online Privacy</h1>
-                <p class="lead mb-4">DataShield is a powerful browser extension that blocks trackers, manages cookies, and enhances your browsing privacy.</p>
+                <h1 class="display-4 fw-bold mb-4 text-white">Take Control of Your Online Privacy</h1>
+                <p class="lead mb-4 text-white opacity-75">DataShield is a powerful browser extension that blocks trackers, manages cookies, and enhances your browsing privacy.</p>
                 <div class="d-flex flex-wrap gap-2">
-                    <a href="{{ url_for('download') }}" class="btn btn-primary btn-lg">Download Now</a>
-                    <a href="{{ url_for('features') }}" class="btn btn-outline-secondary btn-lg">Learn More</a>
+                    <a href="{{ url_for('download') }}" class="btn btn-light btn-lg">Download Now</a>
+                    <a href="{{ url_for('features') }}" class="btn btn-outline-light btn-lg">Learn More</a>
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="{{ url_for('static', filename='images/hero-image.png') }}" alt="DataShield Dashboard" class="img-fluid rounded shadow">
+                <div class="dashboard-mockup">
+                    <div class="dashboard-header">
+                        <span class="fw-bold">DataShield Dashboard</span>
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="dashboard-widget">
+                            <div class="widget-title">Trackers Blocked</div>
+                            <div class="widget-content">
+                                <div class="widget-chart"></div>
+                                <div class="widget-stats">1,248</div>
+                            </div>
+                        </div>
+                        <div class="dashboard-widget">
+                            <div class="widget-title">Privacy Score</div>
+                            <div class="widget-content">
+                                <div class="widget-chart"></div>
+                                <div class="widget-stats">87/100</div>
+                            </div>
+                        </div>
+                        <div class="dashboard-widget">
+                            <div class="widget-title">Cookies Managed</div>
+                            <div class="widget-content">
+                                <div class="widget-chart"></div>
+                                <div class="widget-stats">523</div>
+                            </div>
+                        </div>
+                        <div class="dashboard-widget">
+                            <div class="widget-title">Secure Browsing</div>
+                            <div class="widget-content">
+                                <div class="widget-chart"></div>
+                                <div class="widget-stats">Active</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -26,36 +61,30 @@
         <h2 class="text-center mb-5">Why Choose DataShield?</h2>
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center p-4">
-                        <div class="mb-4">
-                            <i class="fas fa-shield-alt text-primary fa-3x"></i>
-                        </div>
-                        <h3 class="h4 mb-3">Block Trackers</h3>
-                        <p class="text-muted">Stop websites from tracking your online behavior and collecting your personal data.</p>
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
+                    <h3 class="h4 mb-3">Block Trackers</h3>
+                    <p class="text-muted">Stop websites from tracking your online behavior and collecting your personal data.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center p-4">
-                        <div class="mb-4">
-                            <i class="fas fa-cookie-bite text-primary fa-3x"></i>
-                        </div>
-                        <h3 class="h4 mb-3">Cookie Management</h3>
-                        <p class="text-muted">Take control of which cookies are stored and for how long.</p>
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-cookie-bite"></i>
                     </div>
+                    <h3 class="h4 mb-3">Cookie Management</h3>
+                    <p class="text-muted">Take control of which cookies are stored and for how long.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body text-center p-4">
-                        <div class="mb-4">
-                            <i class="fas fa-chart-line text-primary fa-3x"></i>
-                        </div>
-                        <h3 class="h4 mb-3">Privacy Reports</h3>
-                        <p class="text-muted">Get detailed insights about your privacy status and potential vulnerabilities.</p>
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
+                    <h3 class="h4 mb-3">Privacy Reports</h3>
+                    <p class="text-muted">Get detailed insights about your privacy status and potential vulnerabilities.</p>
                 </div>
             </div>
         </div>
@@ -71,8 +100,16 @@
                 <p class="lead mb-4">DataShield analyzes your browsing habits and security settings to generate a personalized privacy score, helping you identify areas for improvement.</p>
                 <a href="{{ url_for('privacy_score') }}" class="btn btn-primary">Learn About Privacy Scores</a>
             </div>
-            <div class="col-lg-6">
-                <img src="{{ url_for('static', filename='images/privacy-score.png') }}" alt="Privacy Score Dashboard" class="img-fluid rounded shadow">
+            <div class="col-lg-6 text-center">
+                <div class="privacy-meter">
+                    <div class="privacy-meter-fill"></div>
+                    <div class="privacy-meter-label">87%</div>
+                </div>
+                <div class="mt-4">
+                    <span class="badge bg-success p-2 me-2">Tracking Protection: Strong</span>
+                    <span class="badge bg-warning p-2 me-2">Cookie Management: Good</span>
+                    <span class="badge bg-info p-2">Ad Blocking: Excellent</span>
+                </div>
             </div>
         </div>
     </div>
@@ -91,7 +128,7 @@
                                 <div class="card-body p-5">
                                     <p class="lead mb-4">"DataShield has completely changed how I browse the web. I feel much more secure knowing my data is protected."</p>
                                     <div class="d-flex align-items-center">
-                                        <img src="{{ url_for('static', filename='images/user1.jpg') }}" alt="User 1" class="rounded-circle me-3" width="60">
+                                        <div class="team-avatar me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">SJ</div>
                                         <div>
                                             <h5 class="mb-1">Sarah Johnson</h5>
                                             <p class="text-muted mb-0">Web Developer</p>
@@ -105,7 +142,7 @@
                                 <div class="card-body p-5">
                                     <p class="lead mb-4">"The privacy reports are incredibly detailed and have helped me understand which websites to avoid."</p>
                                     <div class="d-flex align-items-center">
-                                        <img src="{{ url_for('static', filename='images/user2.jpg') }}" alt="User 2" class="rounded-circle me-3" width="60">
+                                        <div class="team-avatar me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">MC</div>
                                         <div>
                                             <h5 class="mb-1">Michael Chen</h5>
                                             <p class="text-muted mb-0">IT Specialist</p>

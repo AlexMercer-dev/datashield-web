@@ -46,7 +46,24 @@
         <div class="card border-0 shadow-sm overflow-hidden mb-5">
             <div class="row g-0">
                 <div class="col-lg-6">
-                    <img src="{{ url_for('static', filename='images/blog-featured.jpg') }}" alt="Featured Article" class="img-fluid h-100 object-fit-cover">
+                    <div class="featured-article-image bg-gradient-primary d-flex align-items-center justify-content-center text-white" style="height: 100%; min-height: 300px;">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-4x mb-3"></i>
+                            <h4>Featured Article</h4>
+                            <div class="ascii-art small">
+<pre>
+  _____      _                  
+ |  __ \    (_)                 
+ | |__) | __ ___   ____ _  ___ _   _ 
+ |  ___/ '__| \ \ / / _` |/ __| | | |
+ | |   | |  | |\ V / (_| | (__| |_| |
+ |_|   |_|  |_| \_/ \__,_|\___|\__, |
+                                __/ |
+                               |___/ 
+</pre>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card-body p-4 p-lg-5">
@@ -58,7 +75,7 @@
                         <h2 class="card-title h3 mb-3">10 Essential Privacy Practices Everyone Should Follow</h2>
                         <p class="card-text mb-4">In today's digital landscape, protecting your privacy is more important than ever. Learn the essential practices that can significantly enhance your online privacy and security.</p>
                         <div class="d-flex align-items-center mb-4">
-                            <img src="{{ url_for('static', filename='images/team-member2.jpg') }}" alt="Sarah Johnson" class="rounded-circle me-2" width="40" height="40">
+                            <div class="team-avatar team-avatar-sm me-2">SJ</div>
                             <span>By Sarah Johnson</span>
                         </div>
                         <a href="#" class="btn btn-outline-primary">Read Article</a>
@@ -76,7 +93,12 @@
             <!-- Article 1 -->
             <div class="col-md-6 col-lg-4 blog-post" data-category="updates">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="{{ url_for('static', filename='images/blog-post1.jpg') }}" class="card-img-top" alt="DataShield 2.0 Release">
+                    <div class="blog-post-image bg-gradient-blue text-white d-flex align-items-center justify-content-center p-4" style="height: 200px;">
+                        <div class="text-center">
+                            <i class="fas fa-rocket fa-3x mb-3"></i>
+                            <h5>Product Update</h5>
+                        </div>
+                    </div>
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
                             <span class="badge bg-secondary me-2">Product Updates</span>
@@ -94,7 +116,12 @@
             <!-- Article 2 -->
             <div class="col-md-6 col-lg-4 blog-post" data-category="privacy-tips">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="{{ url_for('static', filename='images/blog-post2.jpg') }}" class="card-img-top" alt="Password Managers">
+                    <div class="blog-post-image bg-gradient-green text-white d-flex align-items-center justify-content-center p-4" style="height: 200px;">
+                        <div class="text-center">
+                            <i class="fas fa-key fa-3x mb-3"></i>
+                            <h5>Password Security</h5>
+                        </div>
+                    </div>
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
                             <span class="badge bg-secondary me-2">Privacy Tips</span>
@@ -112,7 +139,12 @@
             <!-- Article 3 -->
             <div class="col-md-6 col-lg-4 blog-post" data-category="security">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="{{ url_for('static', filename='images/blog-post3.jpg') }}" class="card-img-top" alt="Data Breaches">
+                    <div class="blog-post-image bg-gradient-red text-white d-flex align-items-center justify-content-center p-4" style="height: 200px;">
+                        <div class="text-center">
+                            <i class="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                            <h5>Security Alert</h5>
+                        </div>
+                    </div>
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
                             <span class="badge bg-secondary me-2">Security News</span>
@@ -130,7 +162,12 @@
             <!-- Article 4 -->
             <div class="col-md-6 col-lg-4 blog-post" data-category="guides">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="{{ url_for('static', filename='images/blog-post4.jpg') }}" class="card-img-top" alt="Browser Settings">
+                    <div class="blog-post-image bg-gradient-purple text-white d-flex align-items-center justify-content-center p-4" style="height: 200px;">
+                        <div class="text-center">
+                            <i class="fas fa-cogs fa-3x mb-3"></i>
+                            <h5>Browser Settings</h5>
+                        </div>
+                    </div>
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
                             <span class="badge bg-secondary me-2">How-to Guides</span>
@@ -148,7 +185,12 @@
             <!-- Article 5 -->
             <div class="col-md-6 col-lg-4 blog-post" data-category="privacy-tips">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="{{ url_for('static', filename='images/blog-post5.jpg') }}" class="card-img-top" alt="Social Media Privacy">
+                    <div class="blog-post-image bg-gradient-orange text-white d-flex align-items-center justify-content-center p-4" style="height: 200px;">
+                        <div class="text-center">
+                            <i class="fas fa-users fa-3x mb-3"></i>
+                            <h5>Social Media</h5>
+                        </div>
+                    </div>
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
                             <span class="badge bg-secondary me-2">Privacy Tips</span>
@@ -166,7 +208,12 @@
             <!-- Article 6 -->
             <div class="col-md-6 col-lg-4 blog-post" data-category="updates">
                 <div class="card h-100 border-0 shadow-sm">
-                    <img src="{{ url_for('static', filename='images/blog-post6.jpg') }}" class="card-img-top" alt="Mobile App">
+                    <div class="blog-post-image bg-gradient-teal text-white d-flex align-items-center justify-content-center p-4" style="height: 200px;">
+                        <div class="text-center">
+                            <i class="fas fa-mobile-alt fa-3x mb-3"></i>
+                            <h5>Mobile App</h5>
+                        </div>
+                    </div>
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
                             <span class="badge bg-secondary me-2">Product Updates</span>
@@ -322,4 +369,54 @@
         animatePosts(); // Run once on page load
     });
 </script>
+
+<style>
+/* Gradient Backgrounds for Blog Post Images */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #4a6cf7 0%, #1d3ee7 100%);
+}
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+}
+.bg-gradient-green {
+    background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+}
+.bg-gradient-red {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+}
+.bg-gradient-purple {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+}
+.bg-gradient-orange {
+    background: linear-gradient(135deg, #f97316 0%, #c2410c 100%);
+}
+.bg-gradient-teal {
+    background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%);
+}
+
+/* Team Avatar for Blog Authors */
+.team-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #4a6cf7;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.team-avatar-sm {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+}
+
+/* ASCII Art Container */
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+    line-height: 1;
+}
+</style>
 {% endblock %} 
