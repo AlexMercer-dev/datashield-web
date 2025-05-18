@@ -5,6 +5,26 @@ body {
     padding-top: 76px;
 }
 
+/* Announcement Banner */
+.alert-info {
+    background-color: #e8f4fd;
+    color: #084298;
+    border-color: #b6d4fe;
+}
+
+.alert-dismissible {
+    position: relative;
+    z-index: 1031; /* Above the fixed navbar */
+    border-radius: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+/* Adjust body padding to account for the banner */
+body[data-analytics-id] {
+    padding-top: 110px; /* Adjust based on the height of navbar + banner */
+}
+
 /* Custom primary color */
 .btn-primary, 
 .bg-primary {
