@@ -177,4 +177,30 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
+    
+    // Handle premium link click for analytics tracking
+    const premiumLink = document.querySelector('.nav-link.text-primary');
+    if (premiumLink) {
+        premiumLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Check if analytics is available
+            if (window.analytics) {
+                window.analytics.trackEvent('navigation', 'premium_click', 'premium_page');
+            }
+            
+            // Display a modal or alert for now (in real implementation would navigate to premium page)
+            alert('Premium features coming soon! Subscribe for early access.');
+        });
+    }
+    
+    // Handle banner dismissal tracking
+    const banner = document.querySelector('.alert-dismissible .btn-close');
+    if (banner) {
+        banner.addEventListener('click', function() {
+            if (window.analytics) {
+                window.analytics.trackEvent('interaction', 'banner_dismissed', 'promo_banner');
+            }
+        });
+    }
 }); 
